@@ -1,0 +1,103 @@
+:root{
+    /* couleurs principales */
+    --citron:rgb(254, 207, 52);
+    --citron-vert:rgb(89,157,45);
+    --rouge-veggie:rgb(200,30,0);
+
+    /* couleurs de fond */
+    --citron-pastel:hsl(from var(--citron) h s calc(l + 35)); /* mode jour */
+    --gris-foncé:rgb(30,30,30); /* mode nuit */
+
+    /* couleurs secondaires */
+    --gris-clair-transparent:rgba(110,110,110,0.2);
+    --gris-foncé-transparent:rgba(160, 160, 160, 0.2);
+    --gris-clair:rgb(157,157,157);
+    --gris-moyen:rgb(107,107,107);
+    --citron-hover:hsl(from var(--citron) h s calc(l - 20));
+
+    /* liquid glass maison */
+    --liquid-glass-light:rgba(255, 255, 255, 0.8);
+    --liquid-glass-dark:rgba(30, 30, 30, 0.8);
+}
+
+div.hebergeur{
+    background-color: var(--gris-foncé);
+}
+
+button.link{
+    color: var(--citron);
+    background-color: var(--gris-foncé);
+    border: none;
+}
+
+h2, h3, p, h6, ol li, ul li, legend, label{
+    color:white;
+}
+
+header ul li.gris{
+    background-color: var(--gris-foncé-transparent);
+}
+
+.restenoir{
+    color:black
+}
+
+footer, body, div#sous-accueil{
+    background-color: var(--gris-foncé);
+}
+
+#credits{
+    background-color: var(--gris-foncé);
+    box-shadow: 0px 0px 10px black;
+}
+
+#credits a{
+    color:white;
+}
+
+#slider-credits button{
+    background-color:var(--citron)
+}
+
+#credits a:hover{
+    text-decoration: underline dashed white;
+}
+
+div#filter_menu{
+    background-color: var(--liquid-glass-dark);
+    box-shadow: 0px 0px 10px black;
+}
+
+#filter_menu div#filtre1{
+    border-bottom:2px solid white;
+}
+
+header, #slider, #slider_grand, div#menuderoulant{
+    background-color: var(--liquid-glass-dark);
+}
+
+/* #slider{
+    background-color:var(--citron)
+} */
+
+input[type=search], button#filtre{
+    background-color: var(--liquid-glass-dark);
+    box-shadow: 0px 0px 10px black;
+    color:white;
+}
+
+.catalogue, .tutoriel, .searchbar, .recette, .contenu{
+    background-color: var(--gris-foncé);
+}
+
+.resultat{
+    border-bottom: 1px dashed var(--gris-moyen);
+}
+
+.resultat:hover{
+    background-color: rgb(25,25,25);
+}
+
+.slide, .categorie{
+    box-shadow: 0px 0px 5px black;
+}

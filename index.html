@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head id="head">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <link rel="apple-touch-icon" href="IMAGES/apple_icon_white.png">
+    <link rel="icon" sizes="16x16" href="IMAGES/citron16.png" type="image/png">
+    <link rel="icon" sizes="32x32" href="IMAGES/citron32.png" type="image/png">
+    <link rel="icon" sizes="96x96" href="IMAGES/citron96.png" type="image/png">
+	<title>Koikonbouf</title>
+	<link href="style.css?v=2.0" rel="stylesheet">
+    <script src="data.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.4.0/gsap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- police d'écriture google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+</head>
+
+<body id="fondquichange" onload="chargementdesinfos()">
+
+    <div class="load-container" id="load-container">
+        <img class="loading-img" src="IMAGES/logo_citron.png">
+        <div class="loading-txt">
+            <h1>Koikonbouf</h1>
+        </div>
+    </div>
+
+    <div id="filter_menu" popover>
+        <div>
+                <label>Four</label>
+                <input type="checkbox" switch id="btn-four" class="ingrédients" onchange="rechercher()" checked >
+                <span class="box"></span>
+        </div>
+        <div>
+                <label>Plaque de cuisson</label>
+                <input type="checkbox" switch id="btn-cuisson" class="ingrédients" onchange="rechercher()" checked >
+                <span class="box"></span>
+        </div>
+        <div>
+                <label>Congélateur</label>
+                <input type="checkbox" switch id="btn-congelateur" class="ingrédients" onchange="rechercher()" checked >
+                <span class="box"></span>
+        </div>
+        <div>
+                <label>Batteur électrique</label>
+                <input type="checkbox" switch id="btn-fouet-electrique" class="ingrédients" onchange="rechercher()" checked >
+                <span class="box"></span>
+        </div>
+        <div>
+                <label>Mixeur</label>
+                <input type="checkbox" switch id="btn-mixeur" class="ingrédients" onchange="rechercher()" checked >
+                <span class="box"></span>
+        </div>
+
+        <div id="filtre1"></div>
+
+        <div>
+            <label>Recettes veggies</label>
+            <input type="checkbox" switch id="veggie" class="ingrédients" onchange="rechercher()" checked >
+            <span class="box"></span>
+        </div>
+        <div>
+            <label>Recettes non veggies</label>
+            <input type="checkbox" switch id="non-veggie" class="ingrédients" onchange="rechercher()" checked >
+            <span class="box"></span>
+        </div>
+    </div>
+
+    <div id="sur-header">
+
+        <header class="header" id="header">
+            <ul id="ul-header">
+                <li id="li0"><a onclick="vers_laccueil()"><img src="IMAGES/accueil1_black.png"><p id="text-header-ordi">Accueil</p></a></li>
+                <li id="li0bis" class="cache"><a onclick="vers_laccueil()"><img src="IMAGES/accueil2_black.png"><p id="text-header-ordi">Accueil</p></a></li>
+                <li id="li0nuit" class="cache"><a onclick="vers_laccueil()"><img src="IMAGES/accueil1_white.png"><p id="text-header-ordi">Accueil</p></a></li>
+                <li id="li0nuitbis" class="cache gris"><a onclick="vers_laccueil()"><img src="IMAGES/accueil2_white.png"><p id="text-header-ordi">Accueil</p></a></li>
+
+
+                <li id="li1"><a onclick="vers_le_catalogue()"><img src="IMAGES/catalogue_icon.png"><p id="text-header-ordi">Catalogue</p></a></li>
+                <li id="li1bis" class="cache"><a onclick="vers_le_catalogue()"><img src="IMAGES/catalogue_icon2.png"><p id="text-header-ordi">Catalogue</p></a></li>
+                <li id="li2"><a onclick="apparaitre_searchbar()"><img src="IMAGES/icon_search.png"><p id="text-header-ordi">Recherche</p></a></li>
+                <li id="li2bis" class="cache"><a onclick="apparaitre_searchbar()"><img src="IMAGES/icon_search2.png"><p id="text-header-ordi">Recherche</p></a></li>
+                <li id="li3" class="cache"><a onclick="vers_le_catalogue()"><img src="IMAGES/catalogue_icon_blanc.png"><p id="text-header-ordi">Catalogue</p></a></li>
+                <li id="li3bis" class="cache"><a onclick="vers_le_catalogue()"><img src="IMAGES/catalogue_icon_blanc2.png"><p id="text-header-ordi">Catalogue</p></a></li>
+                <li id="li4" class="cache"><a onclick="apparaitre_searchbar()"><img src="IMAGES/icon_search-white.png"><p id="text-header-ordi">Recherche</p></a></li>
+                <li id="li4bis" class="cache"><a onclick="apparaitre_searchbar()"><img src="IMAGES/icon_search_white2.png"><p id="text-header-ordi">Recherche</p></a></li>
+                <li id="switch">
+                    <div>
+                        <input type="checkbox" switch id="test1" class="journuit" onchange="mode_nuit()" checked >
+                        <label for="test1"></label>
+                    </div>
+                    <p id="text-header-ordi-switch">Mode jour/nuit</p>
+                </li>
+            </ul>
+        </header>
+
+        <slider id="slider_grand">
+            <a onclick="apparaitre_tutoriel()">
+                <img id="guide-img-1-grand" src="IMAGES/guide_black.png">
+                <img id="guide-img-2-grand" src="IMAGES/guide.png">
+                <p id="text-header-ordi">Didacticiel</p>
+            </a>
+            <button commandFor="credits" command="toggle-popover">
+                <img id="credits-img-1-grand" src="IMAGES/credits.png">
+                <img id="credits-img-2-grand" src="IMAGES/credits_white.png">
+                <p id="text-header-ordi">Crédits</p>
+            </button>
+        </slider>
+
+    </div>
+
+    <slider id="slider">
+        <div>
+        <a id="main-icon-slider">
+            <img src="IMAGES/menu_icon2.png">
+        </a>
+        <a id="guide" onclick="apparaitre_tutoriel()">
+            <img id="guide-img-1" src="IMAGES/guide_black.png">
+            <img id="guide-img-2" src="IMAGES/guide.png">
+        </a>
+        <button commandFor="credits" command="toggle-popover">
+            <img id="credits-img-1" src="IMAGES/credits.png">
+            <img id="credits-img-2" src="IMAGES/credits_white.png">
+        </button>
+        </div>
+    </slider>
+    
+    <div class="searchbar cache" id="searchbar">
+        <div id="sur-barrerecherche">
+            <!-- <a onclick="disparaitre_searchbar()"><img src="IMAGES/fleche_black.png" id="img-fleche1"><img src="IMAGES/fleche_white.png" id="img-fleche2"></a> -->
+            <input type="search" id="barrerecherche" placeholder="Trouver de l'inspiration...">
+            <button id="filtre" commandFor="filter_menu" command="toggle-popover"><img src="IMAGES/filtre.png" id="img-filtre"><img src="IMAGES/filtre_white.png" class="cache" id="img-filtre-white"></button>
+        </div>
+    </div>
+
+    <button class="croix cache" id="croix" onclick="enlever_recette()"><img src="IMAGES/croix_finale.png"></button>
+
+    <div class="recette cache" id="conteneur">
+        <div class="entete">
+            <img class="grande" id="grandeimage" src="">
+            <div class="epingles">
+                <img class="cache" id="vegetarien" src="IMAGES/vegetarien.png">
+                <div class="etoiles cache" id="etoiles">
+                    <img class="etoile cache" id="etoile1" src="IMAGES/logo3.png">
+                    <img class="etoile cache" id="etoile2" src="IMAGES/logo3.png">
+                    <img class="etoile cache" id="etoile3" src="IMAGES/logo3.png">
+                </div>
+            </div>
+        </div>
+        <div class="contenu" id="contenu">
+            <h4 id="nom"></h4>
+            <div class="infos">
+                <div class="info_recette"><img src="IMAGES/time.png" id="time1"><img src="IMAGES/time_white.png" id="time1_white" class="cache"><h6 id="prep_active"></h6></div>
+                <div class="info_recette"><img src="IMAGES/time2.png" id="time2"><img src="IMAGES/time2_white.png" id="time2_white" class="cache"><h6 id="prep_totale"></h6></div>
+                <div class="info_recette"><img src="IMAGES/personne.svg" id="pers"><img src="IMAGES/personne_white.png" id="pers_white" class="cache"><h6 id="nbpersonnes"></h6></div>
+            </div>
+            <h5>Ingrédients</h5>
+            <h6 class="espacement" id="ingredients1Name"></h6>
+            <ul id="ingredients1"></ul>
+            <h6 class="espacement" id="ingredients2Name"></h6>
+            <ul id="ingredients2"></ul>
+            <h6 class="espacement" id="ingredients3Name"></h6>
+            <ul id="ingredients3"></ul>
+            <button id="copier" onclick="copier_ingredients()"><h6 id="button-copier-text-content">Copier les ingrédients manquants</h6></button>
+            <h5 class="espacement_titres_recette">Préparation</h5>
+            <h6 class="espacement" id="rep1"></h6>
+            <ol id="prep1"></ol>
+            <h6 class="espacement" id="rep2"></h6>
+            <ol id="prep2"></ol>
+            <h6 class="espacement" id="rep3"></h6>
+            <ol id="prep3" class="paddingdessous"></ol>
+        </div>
+    </div>
+
+    <div id="sur-tutoriel" class="cache">
+
+    <div class="tutoriel cache" id="tuto">
+        <div class="page1" id="page1">
+            <div class="header-tutoriel">
+                <img src="IMAGES/logo3.png">
+                <h2 class="supertitre-tutoriel">Koikonbouf</h2>
+            </div>
+            <div class="txt-tutoriel">
+                <h6 class="yellow-tutoriel">Des dizaines de recettes à portée de main</h6>
+                <p class="blanc-tuto">Retrouvez une quantité astronomique de recettes classées par catégorie. Chaque recette comporte ses ingrédients dédiés, son temps de préparation détaillé, et un guide précis pour la réussir comme un chef.</p>
+                <img class="img-tutoriel" src="IMAGES/tuto1.webp">
+                <p class="blanc-tuto">Les recettes sont souvent mises à jour, pour permettre d'évoluer vers des recettes toujours meilleures.</p>
+            </div>
+            <button class="suivant1" onclick="suivant_tutoriel()"><h6 class="next1">Suivant</h6></button>
+        </div>
+        <div class="page2 cache nonactif" id="page2">
+            <div class="header-tutoriel">
+                <img src="IMAGES/logo3.png">
+                <h2 class="supertitre-tutoriel">Koikonbouf</h2>
+            </div>
+            <div class="txt-tutoriel">
+                <h6 class="yellow-tutoriel">Des avis précieux pour vous guider</h6>
+                <p class="blanc-tuto">Le badge "recette approuvée" est présent sur des recettes lorsqu'elles sont considérées comme fiables car suffisamment testées.</p>
+                <img class="img-tutoriel" src="IMAGES/tuto2.webp">
+                <p class="blanc-tuto">Les recettes approuvées comportent aussi une note sur 3 citrons, pour que vous vous fiiez à cet avis.</p>
+            </div>
+            <button class="suivant2" onclick="suivant_tutoriel()"><h6 class="next2">Suivant</h6></button>
+        </div>
+        <div class="page3 cache nonactif" id="page3">
+            <div class="header-tutoriel">
+                <img src="IMAGES/logo3.png">
+                <h2 class="supertitre-tutoriel">Koikonbouf</h2>
+            </div>
+            <div class="txt-tutoriel">
+                <h6 class="yellow-tutoriel">Une simplicité d'organisation abracadabrantesque</h6>
+                <p class="blanc-tuto">Grâce à l'onglet "Recherche", retrouvez en un claquement de doigt votre recette favorite. Découvrez aussi le catalogue culinaire, où toutes les recettes sont répertoriées par genre.</p>
+                <img class="img-tutoriel" src="IMAGES/tuto3.webp">
+                <p class="blanc-tuto">Allez vite découvrir le catalogue culinaire et ses nombreux secrets à couper le souffle !</p>
+            </div>
+            <button class="suivant3" onclick="suivant_tutoriel()"><h6 class="next3">Aller au catalogue</h6></button>
+        </div>
+    </div>
+
+    </div>
+
+    <div id="credits" popover>
+            <div class="txt-tutoriel">
+                <h6 class="yellow-tutoriel">Crédits</h6>
+                <p>Les icones du site Koikonbouf® proviennent de <a href="https://icones8.fr" target="_blank">Icons8</a> et de <a href="https://www.flaticon.com" target="_blank"> Flaticon</a> 
+                (crées par <a href="https://www.flaticon.com/fr/icones-gratuites/bouton-daccueil" target="_blank">Pixel perfect</a>, 
+                <a href="https://www.flaticon.com/fr/icones-gratuites/filtre" target="_blank">aly_aly</a> et <a href="https://www.flaticon.com/fr/icones-gratuites/prochain" target="_blank">Roundicons</a>). <br>
+                L'illustration de fond a été crée par <a href="https://www.dreamstime.com/notkoo2008_info" target="_blank">Notkoo2008</a>
+            </div>
+            <!-- <button class="suivant1" onclick="close_credits()"><h6 class="next1">Fermer</h6></button> -->
+    </div>
+
+    <div class="accueil" id="akeuille">
+
+        <footer id="footer_accueil">
+            <h4 class="titre_accueil">Accueil</h4>
+        </footer>
+
+        <section id="accueil">
+            <div>
+                <h2 class="supertitre">Koikonbouf</h2>
+                <input type="search" class="big-think" id="big-think" onchange="rechercher()">
+            </div>
+        </section>
+
+        <div id="sous-accueil">
+
+
+        <div id="introduction-culinaire-accueil">
+            <h4>Accueil</h4>
+            <p>Retrouvez ici les recettes classées selon la cuisine de saison (recettes du moment), végétarienne ou rapide (recettes de la flemme).</p>
+        </div>
+    
+        <div class="hebergeur expo_actualités" id="ancrage">
+            <h2>Recettes du moment</h2>
+            <button class="defilement gauche" onclick="suivant_carrousel()"><img src="IMAGES/fleche_black.png"><!-- <img src="IMAGES/fleche_white.png"> --></button>
+            <button class="defilement droite" onclick="precedent_carrousel()"><img src="IMAGES/fleche_black.png"><!-- <img src="IMAGES/fleche_white.png"> --></button>
+            <ul id="recettesdumoment" class="carroussel"></ul>
+        </div>
+
+        <div class="hebergeur lien_vers_catalogue">
+            <p class="centered">Envie de trouver de l'inspiration pour vos repas ? Allez jeter un œil au catalogue culinaire !</p>
+            <button class="suivant3" onclick="vers_le_catalogue()"><h6 class="next3">Aller au catalogue</h6></button>
+        </div>
+
+        <div class="hebergeur expo_veggies">
+            <h2>Recettes veggies</h2>
+            <ul id="veggies" class="carroussel"></ul>
+        </div>
+    
+        <div class="hebergeur expo_flemme">
+            <h2>Recettes de la flemme</h2>
+            <ul id="flemme" class="carroussel"></ul>
+        </div>
+
+        </div>
+    
+    </div>
+
+    <div class="catalogue" id="katalaug">
+
+        <footer id="footer_catalogue">
+            <h4 class="titre_catalogue">Catalogue</h4>
+        </footer>
+
+        <div id="introduction-culinaire">
+            <h4>Catalogue</h4>
+            <p id="intro-catalogue">Bienvenue dans le catalogue culinaire ! Retrouvez dans cette section toutes les recettes de Koikonbouf®, classées par genre (entrée, plat, dessert, boissons...) afin de simplifier le plus possible la recherche de petits plats gourmands.</p>
+        </div>
+
+        <div id="sous-catalogue">
+
+        <h2 id="reperedesserts">Les desserts</h2>
+        <ul id="desserts" class="carrousselcatalogue"></ul>
+
+        <h2 id="reperedesserts">Les tartes</h2>
+        <ul id="tartes" class="carrousselcatalogue"></ul>
+
+        <h2 id="reperepasta">Les pastas</h2>
+        <ul id="pastas" class="carrousselcatalogue"></ul>
+
+        <h2 id="repereriz">Le riz</h2>
+        <ul id="riz" class="carrousselcatalogue"></ul>
+
+        <h2 id="reperelegumes">Les légumes cuits</h2>
+        <ul id="legumes" class="carrousselcatalogue"></ul>
+
+        <h2 id="repereviandes">Les viandes & poissons</h2>
+        <ul id="viandes" class="carrousselcatalogue"></ul>
+
+        <h2 id="reperepains">Les pains & tartes salées</h2>
+        <ul id="pains" class="carrousselcatalogue"></ul>
+
+        <h2 id="repereentree">Les entrées & plats froids</h2>
+        <ul id="entrees" class="carrousselcatalogue"></ul>
+
+        <h2 id="repereaperitifs">Les apéritifs</h2>
+        <ul id="aperitifs" class="carrousselcatalogue"></ul>
+
+        <h2 id="repereboissons">Les boissons</h2>
+        <ul id="boissons" class="carrousselcatalogue"></ul>
+
+        <h2 id="reperepates">Les pâtes</h2>
+        <ul id="pates" class="carrousselcatalogue"></ul>
+
+        <h2 id="reperesauces">Les crèmes & sauces</h2>
+        <ul id="sauces" class="carrousselcatalogue"></ul>
+
+        </div>
+
+    </div>
+
+</body>
+</html>
