@@ -210,7 +210,7 @@ footer{
     transform:translateX(-100px);
 }
 
-.slider-déplié{
+#slider.slider-déplié{
     width:200px;
 }
 
