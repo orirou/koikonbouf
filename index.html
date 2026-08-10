@@ -10,7 +10,7 @@
     <link rel="icon" sizes="32x32" href="IMAGES/citron32.png" type="image/png">
     <link rel="icon" sizes="96x96" href="IMAGES/citron96.png" type="image/png">
 	<title>Koikonbouf</title>
-	<link href="style.css?v=2.0" rel="stylesheet">
+	<link href="style.css?v=2.1" rel="stylesheet">
     <script src="data.js" defer></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.4.0/gsap.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
@@ -115,7 +115,7 @@
 
     <slider id="slider">
         <div>
-        <a id="main-icon-slider">
+        <a id="main-icon-slider" onclick="deplier_slider()">
             <img src="IMAGES/menu_icon2.png">
         </a>
         <a id="guide" onclick="apparaitre_tutoriel()">
@@ -131,7 +131,7 @@
     
     <div class="searchbar cache" id="searchbar">
         <div id="sur-barrerecherche">
-            <!-- <a onclick="disparaitre_searchbar()"><img src="IMAGES/fleche_black.png" id="img-fleche1"><img src="IMAGES/fleche_white.png" id="img-fleche2"></a> -->
+            <a id="retour" onclick="disparaitre_searchbar()"><img src="IMAGES/fleche_black.png" id="img-fleche1"><img src="IMAGES/fleche_white.png" id="img-fleche2"></a>
             <input type="search" id="barrerecherche" placeholder="Trouver de l'inspiration...">
             <button id="filtre" commandFor="filter_menu" command="toggle-popover"><img src="IMAGES/filtre.png" id="img-filtre"><img src="IMAGES/filtre_white.png" class="cache" id="img-filtre-white"></button>
         </div>
@@ -225,12 +225,10 @@
     <div id="credits" popover>
             <div class="txt-tutoriel">
                 <h6 class="yellow-tutoriel">Crédits</h6>
-                <p>Les icones du site Koikonbouf® proviennent de <a href="https://icones8.fr" target="_blank">Icons8</a> et de <a href="https://www.flaticon.com" target="_blank"> Flaticon</a> 
-                (crées par <a href="https://www.flaticon.com/fr/icones-gratuites/bouton-daccueil" target="_blank">Pixel perfect</a>, 
-                <a href="https://www.flaticon.com/fr/icones-gratuites/filtre" target="_blank">aly_aly</a> et <a href="https://www.flaticon.com/fr/icones-gratuites/prochain" target="_blank">Roundicons</a>). <br>
+                <p>Les icones du site Koikonbouf proviennent de <a href="https://icones8.fr" target="_blank">Icons8</a> et de <a href="https://www.flaticon.com" target="_blank"> Flaticon</a> 
+                (crées par <a href="https://www.flaticon.com/fr/icones-gratuites/bouton-daccueil" target="_blank">Pixel perfect</a> et <a href="https://www.flaticon.com/fr/icones-gratuites/la-fleche" target="_blank">Catalin Fertu </a>). <br>
                 L'illustration de fond a été crée par <a href="https://www.dreamstime.com/notkoo2008_info" target="_blank">Notkoo2008</a>
             </div>
-            <!-- <button class="suivant1" onclick="close_credits()"><h6 class="next1">Fermer</h6></button> -->
     </div>
 
     <div class="accueil" id="akeuille">
@@ -256,9 +254,9 @@
     
         <div class="hebergeur expo_actualités" id="ancrage">
             <h2>Recettes du moment</h2>
-            <button class="defilement gauche" onclick="suivant_carrousel()"><img src="IMAGES/fleche_black.png"><!-- <img src="IMAGES/fleche_white.png"> --></button>
-            <button class="defilement droite" onclick="precedent_carrousel()"><img src="IMAGES/fleche_black.png"><!-- <img src="IMAGES/fleche_white.png"> --></button>
-            <ul id="recettesdumoment" class="carroussel"></ul>
+            <button class="defilement gauche" disabled name="a1" id="a1g" onclick="precedent_carrousel(this.name)"><img src="IMAGES/fleche_black.png"></button>
+            <button class="defilement droite" name="a1" id="a1d" onclick="suivant_carrousel(this.name)"><img src="IMAGES/fleche_black.png"></button>
+            <ul id="a1" class="carroussel"></ul>
         </div>
 
         <div class="hebergeur lien_vers_catalogue">
@@ -268,12 +266,16 @@
 
         <div class="hebergeur expo_veggies">
             <h2>Recettes veggies</h2>
-            <ul id="veggies" class="carroussel"></ul>
+            <button class="defilement gauche" disabled name="a2" id="a2g" onclick="precedent_carrousel(this.name)"><img src="IMAGES/fleche_black.png"></button>
+            <button class="defilement droite" name="a2" id="a2d" onclick="suivant_carrousel(this.name)"><img src="IMAGES/fleche_black.png"></button>
+            <ul id="a2" class="carroussel"></ul>
         </div>
     
         <div class="hebergeur expo_flemme">
             <h2>Recettes de la flemme</h2>
-            <ul id="flemme" class="carroussel"></ul>
+            <button class="defilement gauche" disabled name="a3" id="a3g" onclick="precedent_carrousel(this.name)"><img src="IMAGES/fleche_black.png"></button>
+            <button class="defilement droite" name="a3" id="a3d" onclick="suivant_carrousel(this.name)"><img src="IMAGES/fleche_black.png"></button>
+            <ul id="a3" class="carroussel"></ul>
         </div>
 
         </div>
@@ -288,46 +290,94 @@
 
         <div id="introduction-culinaire">
             <h4>Catalogue</h4>
-            <p id="intro-catalogue">Bienvenue dans le catalogue culinaire ! Retrouvez dans cette section toutes les recettes de Koikonbouf®, classées par genre (entrée, plat, dessert, boissons...) afin de simplifier le plus possible la recherche de petits plats gourmands.</p>
+            <p id="intro-catalogue">Bienvenue dans le catalogue culinaire ! Retrouvez dans cette section toutes les recettes de Koikonbouf, classées par genre (entrée, plat, dessert, boissons...) afin de simplifier le plus possible la recherche de petits plats gourmands.</p>
         </div>
 
         <div id="sous-catalogue">
 
+        <div>
         <h2 id="reperedesserts">Les desserts</h2>
-        <ul id="desserts" class="carrousselcatalogue"></ul>
+        <button class="defilement gauche" disabled name="c1" id="c1g" onclick="precedent_carrousel(this.name)"><img src="IMAGES/fleche_black.png"></button>
+            <button class="defilement droite" name="c1" id="c1d" onclick="suivant_carrousel(this.name)"><img src="IMAGES/fleche_black.png"></button>
+        <ul id="c1" class="carrousselcatalogue"></ul>
+        </div>
 
+        <div>
         <h2 id="reperedesserts">Les tartes</h2>
-        <ul id="tartes" class="carrousselcatalogue"></ul>
+        <button class="defilement gauche" disabled name="c2" id="c2g" onclick="precedent_carrousel(this.name)"><img src="IMAGES/fleche_black.png"></button>
+        <button class="defilement droite" name="c2" id="c2d" onclick="suivant_carrousel(this.name)"><img src="IMAGES/fleche_black.png"></button>
+        <ul id="c2" class="carrousselcatalogue"></ul>
+        </div>
 
+        <div>
         <h2 id="reperepasta">Les pastas</h2>
-        <ul id="pastas" class="carrousselcatalogue"></ul>
+        <button class="defilement gauche" disabled name="c3" id="c3g" onclick="precedent_carrousel(this.name)"><img src="IMAGES/fleche_black.png"></button>
+        <button class="defilement droite" name="c3" id="c3d" onclick="suivant_carrousel(this.name)"><img src="IMAGES/fleche_black.png"></button>
+        <ul id="c3" class="carrousselcatalogue"></ul>
+        </div>
 
+        <div>
         <h2 id="repereriz">Le riz</h2>
-        <ul id="riz" class="carrousselcatalogue"></ul>
+        <button class="defilement gauche" disabled name="c4" id="c4g" onclick="precedent_carrousel(this.name)"><img src="IMAGES/fleche_black.png"></button>
+        <button class="defilement droite" name="c4" id="c4d" onclick="suivant_carrousel(this.name)"><img src="IMAGES/fleche_black.png"></button>
+        <ul id="c4" class="carrousselcatalogue"></ul>
+        </div>
 
+        <div>
         <h2 id="reperelegumes">Les légumes cuits</h2>
-        <ul id="legumes" class="carrousselcatalogue"></ul>
+        <button class="defilement gauche" disabled name="c5" id="c5g" onclick="precedent_carrousel(this.name)"><img src="IMAGES/fleche_black.png"></button>
+        <button class="defilement droite" name="c5" id="c5d" onclick="suivant_carrousel(this.name)"><img src="IMAGES/fleche_black.png"></button>
+        <ul id="c5" class="carrousselcatalogue"></ul>
+        </div>
 
+        <div>
         <h2 id="repereviandes">Les viandes & poissons</h2>
-        <ul id="viandes" class="carrousselcatalogue"></ul>
+        <button class="defilement gauche" disabled name="c6" id="c6g" onclick="precedent_carrousel(this.name)"><img src="IMAGES/fleche_black.png"></button>
+        <button class="defilement droite" name="c6" id="c6d" onclick="suivant_carrousel(this.name)"><img src="IMAGES/fleche_black.png"></button>
+        <ul id="c6" class="carrousselcatalogue"></ul>
+        </div>
 
+        <div>
         <h2 id="reperepains">Les pains & tartes salées</h2>
-        <ul id="pains" class="carrousselcatalogue"></ul>
+        <button class="defilement gauche" disabled name="c7" id="c7g" onclick="precedent_carrousel(this.name)"><img src="IMAGES/fleche_black.png"></button>
+        <button class="defilement droite" name="c7" id="c7d" onclick="suivant_carrousel(this.name)"><img src="IMAGES/fleche_black.png"></button>
+        <ul id="c7" class="carrousselcatalogue"></ul>
+        </div>
 
+        <div>
         <h2 id="repereentree">Les entrées & plats froids</h2>
-        <ul id="entrees" class="carrousselcatalogue"></ul>
+        <button class="defilement gauche" disabled name="c8" id="c8g" onclick="precedent_carrousel(this.name)"><img src="IMAGES/fleche_black.png"></button>
+        <button class="defilement droite" name="c8" id="c8d" onclick="suivant_carrousel(this.name)"><img src="IMAGES/fleche_black.png"></button>
+        <ul id="c8" class="carrousselcatalogue"></ul>
+        </div>
 
+        <div>
         <h2 id="repereaperitifs">Les apéritifs</h2>
-        <ul id="aperitifs" class="carrousselcatalogue"></ul>
+        <button class="defilement gauche" disabled name="c9" id="c9g" onclick="precedent_carrousel(this.name)"><img src="IMAGES/fleche_black.png"></button>
+        <button class="defilement droite" name="c9" id="c9d" onclick="suivant_carrousel(this.name)"><img src="IMAGES/fleche_black.png"></button>
+        <ul id="c9" class="carrousselcatalogue"></ul>
+        </div>
 
+        <div>
         <h2 id="repereboissons">Les boissons</h2>
-        <ul id="boissons" class="carrousselcatalogue"></ul>
+        <button class="defilement gauche" disabled name="c10" id="c10g" onclick="precedent_carrousel(this.name)"><img src="IMAGES/fleche_black.png"></button>
+        <button class="defilement droite" name="c10" id="c10d" onclick="suivant_carrousel(this.name)"><img src="IMAGES/fleche_black.png"></button>
+        <ul id="c10" class="carrousselcatalogue"></ul>
+        </div>
 
+        <div>
         <h2 id="reperepates">Les pâtes</h2>
-        <ul id="pates" class="carrousselcatalogue"></ul>
+        <button class="defilement gauche" disabled name="c11" id="c11g" onclick="precedent_carrousel(this.name)"><img src="IMAGES/fleche_black.png"></button>
+        <button class="defilement droite" name="c11" id="c11d" onclick="suivant_carrousel(this.name)"><img src="IMAGES/fleche_black.png"></button>
+        <ul id="c11" class="carrousselcatalogue"></ul>
+        </div>
 
+        <div>
         <h2 id="reperesauces">Les crèmes & sauces</h2>
-        <ul id="sauces" class="carrousselcatalogue"></ul>
+        <button class="defilement gauche" disabled name="c12" id="c12g" onclick="precedent_carrousel(this.name)"><img src="IMAGES/fleche_black.png"></button>
+        <button class="defilement droite" name="c12" id="c12d" onclick="suivant_carrousel(this.name)"><img src="IMAGES/fleche_black.png"></button>
+        <ul id="c12" class="carrousselcatalogue"></ul>
+        </div>
 
         </div>
 

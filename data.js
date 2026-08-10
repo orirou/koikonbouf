@@ -1232,33 +1232,32 @@ const recettes =  [
         type:"pate",
         image:"IMAGES/pate_sablee.jpg",
         prep_active:30,
-        prep_totale:80,
+        prep_totale:45,
         fait:true,
         vegetarien:false,
         etoiles:3,
         saison:[6,7,8],
         nb_personnes:"1 tarte (28cm de diamètre)",
         ustensiles:["four"],
-        ingredients1Name:"Pâte sablée classique",
-        ingredients1:["250g de farine", "125g de beurre demi-sel bien mou", "50g de sucre", "1 œuf", "1 cac de vanille en poudre (optionnel)"],
-        ingredients2Name:"Pâte sablée amandes-pavot (meilleure)",
-        ingredients2:["200g de farine", "125g de beurre demi-sel bien mou", "50g de sucre", "1 œuf", "100g de poudre d'amandes", "30g de graines de pavot"],
+        ingredients1Name:"",
+        ingredients1:["200g de farine", "125g de beurre demi-sel pommade", "50g de sucre", "1 œuf", "100g de poudre d'amandes", "25g de graines de pavot (optionnel)"],
+        ingredients2Name:"",
+        ingredients2:[],
         ingredients3Name:"",
         ingredients3:[],
         repere1: "Préparation de la pâte (20 minutes)",
-        repere2: "Pré-cuisson de la pâte (30 minutes)",
+        repere2: "Pré-cuisson de la pâte (25 minutes)",
         repere3: "",
         preparation1:["Sortir le beurre à l'avance pour qu'il ramolisse.",
-            "Dans un saladier, déposer la farine tamisée et le sucre (+ poudre d'amandes / pavot / vanille).",
+            "Dans un saladier, déposer la farine tamisée, le sucre et la poudre d'amandes (+ pavot).",
             "Ajouter le beurre mou en morceaux. Mélanger avec les doigts jusqu'à l'obtention d'une sorte de sable.",
             "Faire un puits et y verser un œuf. Mixer sommairement avec les mains : coller les morceaux de pâte plutôt que de vouloir former une pâte homogène.",
             "Lorsque la pâte est formée, la mettre en boule. L'étaler dans un film plastique et laisser reposer au moins 30 minutes au frigo (1h c'est bien).",
         ],
         preparation2:["Préchauffer le four à 180°C",
-            "Sortir la pâte du réfrigérateur et la travailler encore puis l'étaler.",
-            "Beurrer un moule (ou un cercle à pâtisser). On pourra ajouter du sucre sur les bords selon l'envie.",
-            "Insérer la pâte sablée dans le moule.",
-            "Enfourner pour 20 minutes à 180°C, en mettant des noyaux de cerises séparés par du papier sulfurisé sur le fond de tarte, pour ne pas qu'il gonfle.",
+            "Beurrer un moule classique. On pourra ajouter du sucre sur les bords selon l'envie.",
+            "Sortir la pâte du réfrigérateur et la travailler encore puis l'étaler. L'insérer dans le moule.",
+            "Enfourner pour 15 minutes à 180°C.",
             "Pour une dorure parfaite : étaler un jaune d'œuf battu avec de l'eau sur la tarte, et réenfourner 5 minutes à 180°C."
         ],
         preparation3:[""],
@@ -1467,11 +1466,12 @@ const recettes =  [
         nb_personnes:"8 personnes",
         ustensiles:["cuisson", "four", "congélateur"],
         ingredients1Name:"",
-        ingredients1:["2 pâtes feuilletées de 250 à 300g environ (ou 600g de <button class='link' id='pate_feuilletee' onclick='link(this.id)'>pâte feuilletée</button> maison)", ],
+        ingredients1:["2 pâtes feuilletées de 250 à 300g environ (ou 600g de <button class='link' id='pate_feuilletee' onclick='link(this.id)'>pâte feuilletée</button> maison)", "1 œuf"
+        ],
         ingredients2Name:"Crème pâtissière",
         ingredients2:["1 œuf", "20g de farine", "50g de sucre", "250mL de lait", "un peu de vanille"],
         ingredients3Name:"Crème d'amande",
-        ingredients3:["125g de poudre d'amande", "3 œufs", "100g de beurre pommade","50g de sucre",],
+        ingredients3:["125g de poudre d'amande", "2 œufs", "100g de beurre pommade","50g de sucre",],
         repere1: "Préparation de la crème pâtissière (15 minutes)",
         repere2: "Préparation de la crème d'amande (10 minutes)",
         repere3: "Assemblage de la galette",
@@ -1679,7 +1679,7 @@ const recettes =  [
         ingredients2Name:"Crème pâtissière",
         ingredients2:["1 œuf", "20g de farine", "50g de sucre", "250mL de lait", "un peu de vanille"],
         ingredients3Name:"Pâte sablée",
-        ingredients3:["250g de farine", "100g de beurre demi-sel bien mou", "50g de sucre", "1 œuf", "Optionnel : 30g de poudre d'amandes / 2 cas bombées de graines de pavot / 1 cac de vanille en poudre"],
+        ingredients3:["200g de farine", "125g de beurre demi-sel bien mou", "100g de poudre d'amandes", "50g de sucre", "1 œuf"],
         repere1: "Préparation de la pâte sablée",
         repere2: "Préparation de la crème pâtissière",
         repere3: "Dressage de la tarte",
@@ -1773,7 +1773,7 @@ const recettes =  [
         ingredients2Name:"Crème d'amandes",
         ingredients2:["40g de sucre", "50g de poudre d'amandes", "40g de beurre pommade", "2 œufs",],
         ingredients3Name:"Pâte sablée (28cm de diamètre)",
-        ingredients3:["250g de farine", "125g de beurre demi-sel bien mou", "50g de sucre", "1 œuf",],
+        ingredients3:["200g de farine", "125g de beurre demi-sel bien mou", "100g de poudre d'amandes", "50g de sucre", "1 œuf",],
         repere1: "Préparation de la compotée fraise-rhubarbe",
         repere2: "Préparation de la crème d'amandes",
         repere3: "Montage de la tarte",
@@ -2326,7 +2326,7 @@ const recettes =  [
         ingredients1Name:"",
         ingredients1:["30 prunes (recette calibrée pour des Reine Claude)",],
         ingredients2Name:"Pâte sablée au pavot",
-        ingredients2:["220g de farine", "125g de beurre demi-sel bien mou", "50g de sucre", "1 œuf", "100g de poudre d'amandes", "30g de graines de pavot"],
+        ingredients2:["200g de farine", "125g de beurre demi-sel bien mou", "50g de sucre", "1 œuf", "100g de poudre d'amandes", "30g de graines de pavot (optionnel)"],
         ingredients3Name:"",
         ingredients3:[""],
         repere1: "Préparation de la pâte sablée",
@@ -2368,6 +2368,8 @@ const menu_de_filtrage = document.getElementById("filter_menu");
 const croix = document.getElementById("croix");
 const barrederecherche = document.getElementById("barrerecherche");
 
+
+/* FONCTIONS ADDEVENTLISTENERs */
 
 barrederecherche.addEventListener("input", function(e) {
     rechercher();
@@ -2474,28 +2476,26 @@ window.addEventListener("scroll", () => {
     if (scrollActuelAccueil > dernierScrollAccueil + 5 ) {
         surheader.classList.add("header-ultra-compact");
         ul.classList.add("ul-compact");
-        /* imgslider1.classList.add("imgslider1-compact");
-        imgslider2.classList.add("imgslider2-compact"); */
         slider.classList.add("slider-compact");
     } else if (scrollActuelAccueil > dernierScrollAccueil + 1){
         surheader.classList.add("header-compact");
         slider.classList.add("slider-compact");
     }
     // le header remonte
+    else if ((scrollActuelAccueil < dernierScrollAccueil - 1) && (scrollActuelAccueil < 100)){
+            slider.classList.remove("slider-compact");
+        }
     else if (scrollActuelAccueil < dernierScrollAccueil - 1) {
         surheader.classList.remove("header-compact");
         surheader.classList.remove("header-ultra-compact");
         ul.classList.remove("ul-compact");
     }
-    else if (scrollActuelAccueil < 100){
-            slider.classList.remove("slider-compact");
-            /* imgslider1.classList.remove("imgslider1-compact");
-            imgslider2.classList.remove("imgslider2-compact"); */
-        }
     }
 
     dernierScrollAccueil = scrollActuelAccueil;
 })
+
+/* FONCTIONS PRINCIPALES */
 
 
 function loader(){
@@ -2522,16 +2522,27 @@ function loader(){
     })
     }
 
-function suivant_carrousel(){
-    const ul = document.getElementById("recettesdumoment");
-    ul.scrollBy({left: -2 * 220, behavior: "smooth"});
+function suivant_carrousel(name){
+    let ul = document.getElementById(name);
+    ul.scrollBy({left: 2 * 220, behavior: "smooth"});
+    console.log(ul.scrollLeft + ul.clientWidth + 220);
+    document.getElementById(name + "g").disabled = false;
+    document.getElementById(name + "d").disabled = false;
+    if (ul.scrollLeft + ul.clientWidth + 2 * 220 >= ul.scrollWidth){
+        document.getElementById(name + "d").disabled = true;
+    }
 }
 
-function precedent_carrousel(){
-    const ul = document.getElementById("recettesdumoment");
-    ul.scrollBy({left: 2 * 220, behavior: "smooth"});
-}
-     
+function precedent_carrousel(name){
+    const ul = document.getElementById(name);
+    console.log(ul.scrollLeft);
+    ul.scrollBy({left: -2 * 220, behavior: "smooth"});
+    document.getElementById(name + "g").disabled = false;
+    document.getElementById(name + "d").disabled = false;
+    if (ul.scrollLeft - 2 * 220 <= 0){
+        document.getElementById(name + "g").disabled = true;
+    }
+}  
 
 function vers_le_catalogue(){
     const Variable_qui_correspond_au_deroulement_de_mon_animation = gsap.timeline();
@@ -2597,142 +2608,13 @@ function vers_laccueil(){
     })
 }
 
-function mode_nuit(){
-    surheader.classList.remove("header-compact");
-    surheader.classList.remove("header-ultra-compact");
-    ul.classList.remove("ul-compact");
-    if (document.getElementById("test1").checked === true){
-
-        let head = document.getElementById("head");
-        let link = document.createElement("link");
-        link.setAttribute("rel", "stylesheet")
-        link.setAttribute("type", "text/css")
-        link.setAttribute("href", "style_modesombre.css?v=2.0")
-        link.setAttribute("id", "newstylesheet")
-        head.appendChild(link);
-
-        document.getElementById("li0").classList.add("cache");
-        document.getElementById("li1").classList.add("cache");
-        document.getElementById("li1bis").classList.add("cache");
-        document.getElementById("li2").classList.add("cache");
-        document.getElementById("li2bis").classList.add("cache");
-        document.getElementById("li0bis").classList.add("cache");
-        document.getElementById("li0nuit").classList.remove("cache");
-        document.getElementById("li3").classList.remove("cache");
-        document.getElementById("li4").classList.remove("cache");
-        document.getElementById("li4").classList.remove("cache");
-
-        document.getElementById("time1_white").classList.remove("cache");
-        document.getElementById("time2_white").classList.remove("cache");
-        document.getElementById("time1").classList.add("cache");
-        document.getElementById("time2").classList.add("cache");
-        document.getElementById("pers").classList.add("cache");  
-        document.getElementById("pers_white").classList.remove("cache");  
-
-        document.getElementById("img-filtre-white").classList.remove("cache");
-        document.getElementById("img-filtre").classList.add("cache");
-        /* document.getElementById("img-fleche1").classList.add("cache");
-        document.getElementById("img-fleche2").classList.remove("cache"); */
-
-        document.getElementById("credits-img-1").classList.add("cache");
-        document.getElementById("credits-img-2").classList.remove("cache");
-        document.getElementById("guide-img-1").classList.add("cache");
-        document.getElementById("guide-img-2").classList.remove("cache");
-        document.getElementById("credits-img-1-grand").classList.remove("cache");
-        document.getElementById("credits-img-2-grand").classList.add("cache");
-        document.getElementById("guide-img-1-grand").classList.remove("cache");
-        document.getElementById("guide-img-2-grand").classList.add("cache");
-
-        document.getElementById("accueil").style.backgroundImage = "url(IMAGES/pattern_bouffe_noir.png)";
-        document.getElementById("header").style.boxShadow = "0px 0px 10px black";
-        document.getElementById("slider").style.boxShadow = "0px 0px 10px black";
-        document.getElementById("slider_grand").style.boxShadow = "0px 0px 10px black";
+function deplier_slider(){
+    const slider = document.getElementById("slider")
+    if (slider.classList.contains("slider-déplié")){
+        slider.classList.remove("slider-déplié")
+    } else {
+        slider.classList.add("slider-déplié")
     }
-
-    if (document.getElementById("test1").checked === false){
-        let link = document.getElementById("newstylesheet");
-        link.remove()
-        
-        document.getElementById("li0").classList.remove("cache");
-        document.getElementById("li1").classList.remove("cache");
-        document.getElementById("li2").classList.remove("cache");
-        document.getElementById("li0nuit").classList.add("cache");
-        document.getElementById("li0nuitbis").classList.add("cache");
-        document.getElementById("li3").classList.add("cache");
-        document.getElementById("li3bis").classList.add("cache");
-        document.getElementById("li4").classList.add("cache");
-        document.getElementById("li4bis").classList.add("cache");
-
-        document.getElementById("time1_white").classList.add("cache");
-        document.getElementById("time2_white").classList.add("cache");
-        document.getElementById("time1").classList.remove("cache");
-        document.getElementById("time2").classList.remove("cache");
-        document.getElementById("pers").classList.remove("cache");
-        document.getElementById("pers_white").classList.add("cache");
-
-        document.getElementById("img-filtre-white").classList.add("cache");
-        document.getElementById("img-filtre").classList.remove("cache");
-        /* document.getElementById("img-fleche1").classList.remove("cache");
-        document.getElementById("img-fleche2").classList.add("cache"); */
-
-        document.getElementById("credits-img-1").classList.remove("cache");
-        document.getElementById("credits-img-2").classList.add("cache");
-        document.getElementById("guide-img-1").classList.remove("cache");
-        document.getElementById("guide-img-2").classList.add("cache");
-        document.getElementById("credits-img-1-grand").classList.remove("cache");
-        document.getElementById("credits-img-2-grand").classList.add("cache");
-        document.getElementById("guide-img-1-grand").classList.remove("cache");
-        document.getElementById("guide-img-2-grand").classList.add("cache");
-
-        document.getElementById("accueil").style.backgroundImage = "url(IMAGES/pattern_bouffe.jpg)";
-        document.getElementById("header").style.boxShadow = "0px 0px 10px grey";
-        document.getElementById("slider").style.boxShadow = "0px 0px 10px grey";
-        document.getElementById("slider_grand").style.boxShadow = "0px 0px 10px grey";
-    }
-    vers_laccueil()
-}
-
-function mode_nuit_defaut(){
-    let head = document.getElementById("head");
-    let link = document.createElement("link");
-    link.setAttribute("rel", "stylesheet")
-    link.setAttribute("type", "text/css")
-    link.setAttribute("href", "style_modesombre.css?v=2.0")
-    link.setAttribute("id", "newstylesheet")
-    head.appendChild(link);
-
-    document.getElementById("li0").classList.add("cache");
-    document.getElementById("li1").classList.add("cache");
-    document.getElementById("li2").classList.add("cache");
-    document.getElementById("li0nuitbis").classList.remove("cache");
-    document.getElementById("li3").classList.remove("cache");
-    document.getElementById("li4").classList.remove("cache");
-
-    document.getElementById("time1_white").classList.remove("cache");
-    document.getElementById("time2_white").classList.remove("cache");
-    document.getElementById("time1").classList.add("cache");
-    document.getElementById("time2").classList.add("cache");
-    document.getElementById("pers").classList.add("cache");
-    document.getElementById("pers_white").classList.remove("cache");
-
-    document.getElementById("img-filtre-white").classList.remove("cache");
-    document.getElementById("img-filtre").classList.add("cache");
-    /* document.getElementById("img-fleche1").classList.add("cache");
-    document.getElementById("img-fleche2").classList.remove("cache"); */
-
-    document.getElementById("credits-img-1").classList.add("cache");
-    document.getElementById("credits-img-2").classList.remove("cache");
-    document.getElementById("guide-img-1").classList.add("cache");
-    document.getElementById("guide-img-2").classList.remove("cache");
-    document.getElementById("credits-img-1-grand").classList.add("cache");
-    document.getElementById("credits-img-2-grand").classList.remove("cache");
-    document.getElementById("guide-img-1-grand").classList.add("cache");
-    document.getElementById("guide-img-2-grand").classList.remove("cache");
-
-    document.getElementById("accueil").style.backgroundImage = "url(IMAGES/pattern_bouffe_noir.png)";
-    document.getElementById("header").style.boxShadow = "0px 0px 10px black";
-    document.getElementById("slider").style.boxShadow = "0px 0px 10px black";
-    document.getElementById("slider_grand").style.boxShadow = "0px 0px 10px black";
 }
 
 function apparaitre_searchbar(){
@@ -2916,7 +2798,146 @@ function rechercher() {
             liste_div[i].classList.remove("resultat");
         }
     }}
-    
+
+/* MODES JOUR/NUIT */
+
+function mode_nuit(){
+    surheader.classList.remove("header-compact");
+    surheader.classList.remove("header-ultra-compact");
+    ul.classList.remove("ul-compact");
+    if (document.getElementById("test1").checked === true){
+
+        let head = document.getElementById("head");
+        let link = document.createElement("link");
+        link.setAttribute("rel", "stylesheet")
+        link.setAttribute("type", "text/css")
+        link.setAttribute("href", "style_modesombre.css?v=2.1")
+        link.setAttribute("id", "newstylesheet")
+        head.appendChild(link);
+
+        document.getElementById("li0").classList.add("cache");
+        document.getElementById("li1").classList.add("cache");
+        document.getElementById("li1bis").classList.add("cache");
+        document.getElementById("li2").classList.add("cache");
+        document.getElementById("li2bis").classList.add("cache");
+        document.getElementById("li0bis").classList.add("cache");
+        document.getElementById("li0nuit").classList.remove("cache");
+        document.getElementById("li3").classList.remove("cache");
+        document.getElementById("li4").classList.remove("cache");
+        document.getElementById("li4").classList.remove("cache");
+
+        document.getElementById("time1_white").classList.remove("cache");
+        document.getElementById("time2_white").classList.remove("cache");
+        document.getElementById("time1").classList.add("cache");
+        document.getElementById("time2").classList.add("cache");
+        document.getElementById("pers").classList.add("cache");  
+        document.getElementById("pers_white").classList.remove("cache");  
+
+        document.getElementById("img-filtre-white").classList.remove("cache");
+        document.getElementById("img-filtre").classList.add("cache");
+        document.getElementById("img-fleche1").classList.add("cache");
+        document.getElementById("img-fleche2").classList.remove("cache");
+
+        document.getElementById("credits-img-1").classList.add("cache");
+        document.getElementById("credits-img-2").classList.remove("cache");
+        document.getElementById("guide-img-1").classList.add("cache");
+        document.getElementById("guide-img-2").classList.remove("cache");
+        document.getElementById("credits-img-1-grand").classList.remove("cache");
+        document.getElementById("credits-img-2-grand").classList.add("cache");
+        document.getElementById("guide-img-1-grand").classList.remove("cache");
+        document.getElementById("guide-img-2-grand").classList.add("cache");
+
+        document.getElementById("accueil").style.backgroundImage = "url(IMAGES/pattern_bouffe_noir.png)";
+        document.getElementById("header").style.boxShadow = "0px 0px 10px black";
+        document.getElementById("slider").style.boxShadow = "0px 0px 10px black";
+        document.getElementById("slider_grand").style.boxShadow = "0px 0px 10px black";
+    }
+
+    if (document.getElementById("test1").checked === false){
+        let link = document.getElementById("newstylesheet");
+        link.remove()
+        
+        document.getElementById("li0").classList.remove("cache");
+        document.getElementById("li1").classList.remove("cache");
+        document.getElementById("li2").classList.remove("cache");
+        document.getElementById("li0nuit").classList.add("cache");
+        document.getElementById("li0nuitbis").classList.add("cache");
+        document.getElementById("li3").classList.add("cache");
+        document.getElementById("li3bis").classList.add("cache");
+        document.getElementById("li4").classList.add("cache");
+        document.getElementById("li4bis").classList.add("cache");
+
+        document.getElementById("time1_white").classList.add("cache");
+        document.getElementById("time2_white").classList.add("cache");
+        document.getElementById("time1").classList.remove("cache");
+        document.getElementById("time2").classList.remove("cache");
+        document.getElementById("pers").classList.remove("cache");
+        document.getElementById("pers_white").classList.add("cache");
+
+        document.getElementById("img-filtre-white").classList.add("cache");
+        document.getElementById("img-filtre").classList.remove("cache");
+        document.getElementById("img-fleche1").classList.remove("cache");
+        document.getElementById("img-fleche2").classList.add("cache");
+
+        document.getElementById("credits-img-1").classList.remove("cache");
+        document.getElementById("credits-img-2").classList.add("cache");
+        document.getElementById("guide-img-1").classList.remove("cache");
+        document.getElementById("guide-img-2").classList.add("cache");
+        document.getElementById("credits-img-1-grand").classList.remove("cache");
+        document.getElementById("credits-img-2-grand").classList.add("cache");
+        document.getElementById("guide-img-1-grand").classList.remove("cache");
+        document.getElementById("guide-img-2-grand").classList.add("cache");
+
+        document.getElementById("accueil").style.backgroundImage = "url(IMAGES/pattern_bouffe.jpg)";
+        document.getElementById("header").style.boxShadow = "0px 0px 10px grey";
+        document.getElementById("slider").style.boxShadow = "0px 0px 10px grey";
+        document.getElementById("slider_grand").style.boxShadow = "0px 0px 10px grey";
+    }
+    vers_laccueil()
+}
+
+function mode_nuit_defaut(){
+    let head = document.getElementById("head");
+    let link = document.createElement("link");
+    link.setAttribute("rel", "stylesheet")
+    link.setAttribute("type", "text/css")
+    link.setAttribute("href", "style_modesombre.css?v=2.1")
+    link.setAttribute("id", "newstylesheet")
+    head.appendChild(link);
+
+    document.getElementById("li0").classList.add("cache");
+    document.getElementById("li1").classList.add("cache");
+    document.getElementById("li2").classList.add("cache");
+    document.getElementById("li0nuitbis").classList.remove("cache");
+    document.getElementById("li3").classList.remove("cache");
+    document.getElementById("li4").classList.remove("cache");
+
+    document.getElementById("time1_white").classList.remove("cache");
+    document.getElementById("time2_white").classList.remove("cache");
+    document.getElementById("time1").classList.add("cache");
+    document.getElementById("time2").classList.add("cache");
+    document.getElementById("pers").classList.add("cache");
+    document.getElementById("pers_white").classList.remove("cache");
+
+    document.getElementById("img-filtre-white").classList.remove("cache");
+    document.getElementById("img-filtre").classList.add("cache");
+    document.getElementById("img-fleche1").classList.add("cache");
+    document.getElementById("img-fleche2").classList.remove("cache");
+
+    document.getElementById("credits-img-1").classList.add("cache");
+    document.getElementById("credits-img-2").classList.remove("cache");
+    document.getElementById("guide-img-1").classList.add("cache");
+    document.getElementById("guide-img-2").classList.remove("cache");
+    document.getElementById("credits-img-1-grand").classList.add("cache");
+    document.getElementById("credits-img-2-grand").classList.remove("cache");
+    document.getElementById("guide-img-1-grand").classList.add("cache");
+    document.getElementById("guide-img-2-grand").classList.remove("cache");
+
+    document.getElementById("accueil").style.backgroundImage = "url(IMAGES/pattern_bouffe_noir.png)";
+    document.getElementById("header").style.boxShadow = "0px 0px 10px black";
+    document.getElementById("slider").style.boxShadow = "0px 0px 10px black";
+    document.getElementById("slider_grand").style.boxShadow = "0px 0px 10px black";
+}
 
 /* DIV POUR LE TUTORIEL */ 
 
@@ -3267,7 +3288,9 @@ async function copier_ingredients(){
     await navigator.clipboard.writeText(texte_brut);
     console.log(texte_brut);
     bouton.disabled = true
-    }
+}
+
+/* CHARGEMENT DES RECETTES */
 
 function charger_recettesveggies(){
 
@@ -3278,7 +3301,7 @@ function charger_recettesveggies(){
     };
     liste_noms.sort();
 
-    let caroussel = document.getElementById("veggies");
+    let caroussel = document.getElementById("a2");
 
     for (let i = 0; i < liste_noms.length; i++) {
         if (recettes[liste_noms[i][1]].vegetarien === true){
@@ -3343,7 +3366,7 @@ function charger_recettesdumoment(){
     };
     liste_noms.sort();
 
-    let caroussel = document.getElementById("recettesdumoment");
+    let caroussel = document.getElementById("a1");
     var date = new Date();
     let saisonactive = date.getMonth()+1;
     for (let i = 0; i < liste_noms.length; i++) {
@@ -3411,7 +3434,7 @@ function charger_recettesflemme(){
     };
     liste_noms.sort();
 
-    let caroussel = document.getElementById("flemme");
+    let caroussel = document.getElementById("a3");
     for (let i = 0; i < liste_noms.length; i++) {
         if (recettes[liste_noms[i][1]].prep_totale <= 20 && recettes[liste_noms[i][1]].type != "aperitif" && recettes[liste_noms[i][1]].type != "boisson" && recettes[liste_noms[i][1]].type != "dessert" && recettes[liste_noms[i][1]].type != "pate" && recettes[liste_noms[i][1]].type != "sauce" && recettes[liste_noms[i][1]].fait === true){
         let slide = document.createElement("li");
@@ -3476,18 +3499,18 @@ function charger_catalogue (){
     };
     liste_noms.sort();
 
-    let type_pastas = document.getElementById("pastas");
-    let type_viandes = document.getElementById("viandes");
-    let type_desserts = document.getElementById("desserts");
-    let type_tartes = document.getElementById("tartes");
-    let type_aperitifs = document.getElementById("aperitifs");
-    let type_boissons = document.getElementById("boissons");
-    let type_pains = document.getElementById("pains");
-    let type_riz = document.getElementById("riz");
-    let type_entree = document.getElementById("entrees");
-    let type_legumes = document.getElementById("legumes");
-    let type_pates = document.getElementById("pates");
-    let type_sauces = document.getElementById("sauces");
+    let type_pastas = document.getElementById("c1");
+    let type_viandes = document.getElementById("c2");
+    let type_desserts = document.getElementById("c3");
+    let type_tartes = document.getElementById("c4");
+    let type_aperitifs = document.getElementById("c5");
+    let type_boissons = document.getElementById("c6");
+    let type_pains = document.getElementById("c7");
+    let type_riz = document.getElementById("c8");
+    let type_entree = document.getElementById("c9");
+    let type_legumes = document.getElementById("c10");
+    let type_pates = document.getElementById("c11");
+    let type_sauces = document.getElementById("c12");
 
     for (let i = 0; i < liste_noms.length; i++) {
         let slide = document.createElement("li");

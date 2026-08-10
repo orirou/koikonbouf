@@ -102,6 +102,10 @@ div#sous-catalogue{
     padding: 30px 10px 100px 10px;
 }
 
+div#sous-catalogue div{
+    position:relative;
+}
+
 .carroussel{
     border-radius: 10px;
     flex-wrap: nowrap;
@@ -189,18 +193,12 @@ footer{
     border-radius:30px;
     background-color: var(--liquid-glass-light);
     backdrop-filter: blur(5px);
-
-    /* display: flex;
-    flex-direction: row;
-    justify-content: left;
-    align-items: center; */
-
     transition: all ease-in-out 200ms;
     cursor:pointer;
     overflow:hidden;
 }
 
-#slider:hover, #slider:active{
+#slider:hover{
     width:200px;
 }
 
@@ -216,6 +214,10 @@ footer{
     transform:translateX(-100px);
 }
 
+.slider-déplié{
+    width:200px;
+}
+
 #slider a, #slider button{
    height:100%;
    width:60px;
@@ -229,8 +231,12 @@ footer{
 
 a#main-icon-slider{
     background-color:var(--citron);
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(5px);
     border-radius: 30px;
+}
+
+a#main-icon-slider:active{
+    transform:scale(0.92);
 }
 
 #slider button:hover, #slider #guide:hover{
@@ -420,14 +426,15 @@ button#filtre{
     justify-content: center;
     align-items: center;
     transition: all ease-in-out 200ms;
-    border: 2px solid var(--citron);
+    /* border: 2px solid var(--citron); */
     display:flex;
     anchor-name: --le-menu-des-filtres;
     cursor:pointer;
+    margin-left:10px;
 }
 
 button#filtre img{
-    height:30px;
+    height:34px;
     width:auto;
     margin:auto;
     cursor:pointer;
@@ -440,8 +447,8 @@ button#filtre:hover img{
     transform:scale(1.1);
 }
 
-button#filtre img:active{
-    animation: pop 200ms ease-out;
+button#filtre:active img{
+    transform:scale(0.92);
 }
 
 div#filter_menu{
@@ -490,16 +497,35 @@ div#filter_menu:popover-open{
     flex-direction:row;
     justify-content:space-between;
     align-items:center;
-    gap:10px;
     margin:10px 10px 5px 10px;
 }
 
-#sur-barrerecherche a img{
-    height:30px;
+a#retour img{
+    height:28px;
     width:auto;
-    transform: rotate(180deg);
+    /* transform: rotate(90deg); */
     cursor:pointer;
+    margin:10px 12px 10px 8px;
+    transition:all ease-in-out 200ms;
 }
+
+a#retour{
+    border-radius: 30px;
+    background-color: var(--liquid-glass-light);
+    height: 50px;
+    box-shadow: 0 0 10px var(--gris-clair);
+    backdrop-filter:blur(5px);
+    margin-right:10px;
+}
+
+a#retour:hover img{
+    transform:scale(1.1) ;
+}
+
+a#retour:active img{
+    transform:scale(0.92) ;
+}
+
 
 input[type=search]{
     padding: 0 15px 0 20px;
@@ -643,7 +669,7 @@ div#recherches{
     margin:5px;
     background-color:rgba(0, 0, 0, 0.2);
     backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(5px);
 }
 
 .croix img:hover{
@@ -701,7 +727,7 @@ div.epingles{
     flex-direction: row-reverse;
     background-color:rgba(65, 156, 0, 0.15);
     backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(5px);
     z-index:0;
     border-radius:15px;
     border: 2px solid var(--citron-vert);
@@ -727,7 +753,7 @@ img#vegetarien{
 
 div.hebergeur {
     position:relative;
-    padding: 15px 10px 0px 10px;
+    padding: 0px 10px 0px 10px;
     width:calc(100% - 20px);
     margin:0 auto 0 auto;
 }
@@ -737,18 +763,16 @@ div.premiere-div-accueil{
 }
 
 div.expo_actualités{
-    padding:10px 10px 15px 10px;
+    margin:10px auto 15px auto;
 }
-
-/* div.expo_nouveautés{
-    padding:15px 10px 15px 10px;
-} */
 
 div.expo_veggies{
-    padding:25px 10px 0px 10px;
+    margin:25px auto 0px auto;
 }
 
-div.expo_flemme{padding:15px 10px 80px 10px;}
+div.expo_flemme{
+    margin:15px auto 80px auto;
+}
 
 .lien_vers_catalogue{
     display:flex;
@@ -927,9 +951,17 @@ button#copier.bouton-active-coché:disabled{
     transform:translateY(-50%) scale(0.92);
 }
 
+.defilement:disabled{
+    background-color: var(--liquid-glass-light);
+    cursor:auto;
+    display:none;
+}
+
 .gauche{left:-5px; }
 .droite{right:-5px; }
-.gauche img{transform:rotate(180deg)}
+.catalogue .gauche{left:-20px}
+.catalogue .droite{right:-20px}
+.droite img{transform:rotate(180deg)}
 
 .defilement img{width:30px; height:auto;}
 .gauche img{margin:auto 5px auto 0;}
@@ -1401,11 +1433,11 @@ p.centered{text-align:center; padding:15px 20px 30px 20px; color:white;}
 
 @media screen and (min-width:800px) {
 
-    div#sous-accueil{border-radius:0;}
+    div#sous-accueil{border-radius:0; padding:0 0 0 30px;}
     h2.supertitre{font-size:70px;margin-bottom:10px;}
     h2{font-size: 27px;}
     h4.titre_catalogue{font-size:27px; padding:0 0 0 110px; animation: titre_catalogue_petit linear auto both;animation-timeline: --catalogue-scroll;animation-range: 220px 240px;}
-    h4.titre_accueil{font-size:27px; padding:0 0 0 115px; animation: titre_accueil_petit linear auto both;animation-timeline: scroll();animation-range: 330px 350px;}
+    h4.titre_accueil{font-size:27px; padding:0 0 0 130px; animation: titre_accueil_petit linear auto both;animation-timeline: scroll();animation-range: 330px 350px;}
     h3{font-size: 19px;}
     h4{font-size: 35px;}
     h5{font-size: 27px;}
@@ -1415,7 +1447,9 @@ p.centered{text-align:center; padding:15px 20px 30px 20px; color:white;}
     #intro-catalogue{max-width:800px;}
     #introduction-culinaire{padding:0 120px 0 120px; height:300px;}
     .txt-tutoriel{margin:0 30px 20px 30px;}
-    #sur-barrerecherche a img{display:none;}
+    a#retour{display:none;}
+
+    .catalogue{padding:0 0 0 20px;}
 
 
     footer{padding:20px 0 20px 10px; /* height:200px; */}
@@ -1492,12 +1526,14 @@ p.centered{text-align:center; padding:15px 20px 30px 20px; color:white;}
     .contenu{overflow-y: scroll;padding:25px 20px 0px 25px;}
     div.epingles{top: calc(100vh - 140px); width: calc(100% - 40px); height:60px; margin:0 20px 0 20px; gap:10px;}
     
+    .catalogue{padding:0 0 0 0;}
     .etoile{width:46px;}
     img#vegetarien{height:56px;}
     .croix{left:calc(100% - 105px);}
 
     #introduction-culinaire{padding:0 100px 0 200px; height:300px;}
     div#sous-catalogue{padding: 30px 130px 100px 130px;}
+    div#sous-accueil{padding:0 0 0 0;}
     div.hebergeur{width:calc(100% - 260px);}
     #introduction-culinaire-accueil{padding:25px 20px 15px 40px; width:calc(100% - 260px)}
     h4.titre_catalogue{padding:0 0 0 130px;}
