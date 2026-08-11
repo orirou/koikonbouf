@@ -43,7 +43,7 @@ body{
     display:flex;
     flex-direction:column;
     align-items: center;
-    background-image: url(IMAGES/pattern_bouffe_noir.png);
+    background-image: url(IMAGES/pattern_bouffe.jpg);
 }
 
 div#sous-accueil{
@@ -64,7 +64,7 @@ section {
     padding:0;
     background-size: auto;
     background-repeat: repeat;
-    background-image: url(IMAGES/pattern_bouffe_noir.png);
+    background-image: url(IMAGES/pattern_bouffe.jpg);
 }
 
 section div{
@@ -231,20 +231,12 @@ a#main-icon-slider{
     border-radius: 30px;
 }
 
-/* a#main-icon-slider:focus{
-    animation: pop 200ms ease-in-out;
-} */
-
 a#main-icon-slider:hover img{
     transform:scale(1.1);
 }
 a#main-icon-slider:active img{
     transform:scale(0.92);
 }
-
-/* a#main-icon-slider.appuye{
-    transform:scale(0.92);
-} */
 
 #slider button:hover, #slider #guide:hover{
     transform:scale(1.1);
@@ -699,6 +691,7 @@ div#recherches{
 
 .suivant1:hover, .suivant2:hover, .suivant3:hover{  
     background-color:var(--citron-hover);
+    height:44px;
 }
 
 .suivant1:active, .suivant2:active, .suivant3:active{

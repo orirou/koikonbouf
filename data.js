@@ -7,7 +7,7 @@
 const recettes =  [
     {
         nom:"Pasta Carbonara",
-        id:"pasta_carbonara",
+        id:"pâtes pates carbonara oeufs",
         type:"pasta",
         image:"IMAGES/pasta_carbonara.png",
         prep_active:10,
@@ -37,7 +37,7 @@ const recettes =  [
     },
     {
         nom:"Fondant au chocolat",
-        id:"fondant gateau chocolat",
+        id:"fondant gateau chocolat oeufs",
         type:"dessert",
         image:"IMAGES/fondant_au_chocolat.jpeg",
         prep_active:15,
@@ -70,7 +70,7 @@ const recettes =  [
     },
     {
         nom:"Flan des îles",
-        id:"flan_des_iles",
+        id:"flan caramel oeufs été",
         type:"dessert",
         image:"IMAGES/flan_des_iles.webp",
         prep_active:15,
@@ -100,7 +100,7 @@ const recettes =  [
     },
     {
         nom:"Tiramisu",
-        id:"tiramisu",
+        id:"tiramisu oeufs italienne",
         type:"dessert",
         image:"IMAGES/tiramisu.jpeg",
         prep_active:20,
@@ -133,7 +133,7 @@ const recettes =  [
     },
     {
         nom:"Tiramisu au citron",
-        id:"tiramisu_au_citron",
+        id:"tiramisu citron été frais oeufs italienne",
         type:"dessert",
         image:"IMAGES/tiramisu_citron.webp",
         prep_active:60,
@@ -327,7 +327,7 @@ const recettes =  [
     },
     {
         nom:"Croque hermaphrodite",
-        id:"croque_hermaphrodite",
+        id:"croque monsieur croque madame oeufs",
         type:"pain",
         image:"IMAGES/croque_hermaphrodite.jpeg",
         prep_active:5,
@@ -643,7 +643,7 @@ const recettes =  [
     },
     {
         nom:"Gâteau invisible aux pommes",
-        id:"gateau_invisible_pommes",
+        id:"gateau pommes Cyril Lignac oeufs",
         type:"dessert",
         image:"IMAGES/gateau_invisible_pommes2.jpeg",
         prep_active:45,
@@ -754,7 +754,7 @@ const recettes =  [
     },
     {
         nom:"Feuilletés au chorizo",
-        id:"feuilletes_chorizo",
+        id:"feuilletes chorizo oeufs apero",
         type:"aperitif",
         image:"IMAGES/chorizo.jpeg",
         prep_active:10,
@@ -823,7 +823,7 @@ const recettes =  [
     },
     {
         nom:"Pâte à crêpes",
-        id:"crepes",
+        id:"crepes oeufs bretagne bretonne",
         type:"pate",
         image:"IMAGES/crepes.jpeg",
         prep_active:15,
@@ -853,7 +853,7 @@ const recettes =  [
     },
     {
         nom:"Quiches",
-        id:"quiches",
+        id:"quiches tartes oeufs",
         type:"pain",
         image:"IMAGES/quiche.jpeg",
         prep_active:20,
@@ -897,7 +897,7 @@ const recettes =  [
     },
     {
         nom:"Far breton",
-        id:"far_breton",
+        id:"far flan breton bretagne oeufs",
         type:"dessert",
         image:"IMAGES/far_aux_pruneaux.jpeg",
         prep_active:30,
@@ -1023,7 +1023,7 @@ const recettes =  [
     },
     {
         nom:"Salade de chou",
-        id:"salade_de_chou",
+        id:"salade de chou oeufs",
         type:"entree",
         image:"IMAGES/salade_de_chou.webp",
         prep_active:"?",
@@ -1053,7 +1053,7 @@ const recettes =  [
     },
     {
         nom:"Brownie aux noix de pécan",
-        id:"brownie gateau chocolat",
+        id:"brownie gateau chocolat oeufs",
         type:"dessert",
         image:"IMAGES/brownie.webp",
         prep_active:35,
@@ -1089,7 +1089,7 @@ const recettes =  [
     },
     {
         nom:"Gâteau au yaourt",
-        id:"gateau_yaourt",
+        id:"gateau yaourt oeufs",
         type:"dessert",
         image:"IMAGES/gateau_au_yaourt.webp",
         prep_active:"?",
@@ -1228,7 +1228,7 @@ const recettes =  [
     },
     {
         nom:"Pâte sablée",
-        id:"patesablee",
+        id:"pate sablee oeufs",
         type:"pate",
         image:"IMAGES/pate_sablee.jpg",
         prep_active:30,
@@ -1264,7 +1264,7 @@ const recettes =  [
     },
     {
         nom:"Cookies aux noix de pécan",
-        id:"cookies",
+        id:"cookies levain bakery oeufs",
         type:"dessert",
         image:"IMAGES/cookies2.jpeg",
         prep_active:30,
@@ -1357,7 +1357,7 @@ const recettes =  [
     },
     {
         nom:"Quiche au thon",
-        id:"quiche_thon",
+        id:"quiche thon oeufs",
         type:"pain",
         image:"IMAGES/quiche_thon.webp",
         prep_active:30,
@@ -1369,7 +1369,7 @@ const recettes =  [
         nb_personnes:"4 personnes",
         ustensiles:["cuisson", "four"],
         ingredients1Name:"",
-        ingredients1:["1 pâte feuilletée", "1 boite de thon à la tomate", "1 oignon", "Des légumes au choix (tomates, courgettes, etc)", "20cl de crème fraîche", "3 oeufs", "100g de gruyère râpé", "Sel / poivre / moutarde / noix de muscade"],
+        ingredients1:["1 pâte feuilletée", "1 boite de thon à la tomate", "1 oignon", "Des légumes au choix (tomates, courgettes, etc)", "20cl de crème fraîche", "3 œufs", "100g de gruyère râpé", "Sel / poivre / moutarde / noix de muscade"],
         ingredients2Name:"",
         ingredients2:[],
         ingredients3Name:"",
@@ -1454,7 +1454,7 @@ const recettes =  [
     },
     {
         nom:"Galette des rois",
-        id:"galette_des_rois",
+        id:"galette des rois frangipane oeufs",
         type:"dessert",
         image:"IMAGES/galette_des_rois.jpg",
         prep_active:50,
@@ -1601,7 +1601,7 @@ const recettes =  [
     },
     {
         nom:"Pâte à galette",
-        id:"galette",
+        id:"galette bretagne bretonnes",
         type:"pate",
         image:"IMAGES/galette.jpeg",
         prep_active:10,
@@ -1631,7 +1631,7 @@ const recettes =  [
     },
     {
         nom:"Pâte à gaufres",
-        id:"gaufres",
+        id:"gaufres oeufs",
         type:"pate",
         image:"IMAGES/gaufres.webp",
         prep_active:15,
@@ -1663,7 +1663,7 @@ const recettes =  [
     },
     {
         nom:"Tarte aux fraises",
-        id:"tarte_aux_fraises",
+        id:"tarte aux fraises pate sablee oeufs",
         type:"tarte",
         image:"IMAGES/tarte-aux-fraises.jpg",
         prep_active:75,
@@ -1696,7 +1696,7 @@ const recettes =  [
     },
     {
         nom:"Crème pâtissière",
-        id:"crème_patissière",
+        id:"crème patissière oeufs",
         type:"sauce",
         image:"IMAGES/creme_patissiere.jpg",
         prep_active:15,
@@ -1757,7 +1757,7 @@ const recettes =  [
     },
     {
         nom:"Tarte à la rhubarbe",
-        id:"tarte_rhubarbe",
+        id:"tarte rhubarbe pate sablee oeuf",
         type:"tarte",
         image:"IMAGES/tarte-rhubarbe.jpg",
         prep_active:100,
@@ -1873,7 +1873,7 @@ const recettes =  [
     },
     {
         nom:"Pâte à choux",
-        id:"patachou",
+        id:"pate à chou profiteroles oeufs",
         type:"pate",
         image:"IMAGES/patachou.jpg",
         prep_active:40,
@@ -1911,7 +1911,7 @@ const recettes =  [
     },
     {
         nom:"Profiteroles",
-        id:"profiteroles",
+        id:"profiteroles oeufs pate à choux",
         type:"dessert",
         image:"IMAGES/profiteroles.webp",
         prep_active:50,
@@ -1941,7 +1941,7 @@ const recettes =  [
     },
     {
         nom:"Gratin dauphinois",
-        id:"gratin patates",
+        id:"gratin patates oeufs",
         type:"legume",
         image:"IMAGES/gratin_dauphinois.webp",
         prep_active:"?",
@@ -1975,7 +1975,7 @@ const recettes =  [
     },
     {
         nom:"Œufs mimosa",
-        id:"oeufs_mimosa",
+        id:"oeufs mimosa",
         type:"entree",
         image:"IMAGES/oeufs_mimosa.webp",
         prep_active:"20",
@@ -2040,7 +2040,7 @@ const recettes =  [
     },
     {
         nom:"Tagliatelles fraîches maison",
-        id:"pâte_à_pâtes",
+        id:"pâte à pâtes nouilles oeufs",
         type:"pate",
         image:"IMAGES/pates_fraiches.jpeg",
         prep_active:"40",
@@ -2168,7 +2168,7 @@ const recettes =  [
     },
     {
         nom:"Entremets aux 3 chocolats",
-        id:"gateau chocolat praliné génoise",
+        id:"gateau chocolat praliné génoise oeufs",
         type:"dessert",
         image:"IMAGES/entremets_3_chocolats.jpg",
         prep_active:"?",
@@ -2312,7 +2312,7 @@ const recettes =  [
     },
     {
         nom:"Tarte aux prunes",
-        id:"tartes fruits mirabelles prune reine claude",
+        id:"tartes fruits mirabelles prune reine claude oeufs pate sablee",
         type:"tarte",
         image:"IMAGES/tarte_aux_prunes.webp",
         prep_active:"30",
@@ -2343,7 +2343,7 @@ const recettes =  [
     },
     {
         nom:"Salade de riz",
-        id:"salade crudité riz frais été plat froid",
+        id:"salade crudité riz frais été plat froid oeufs",
         type:"entree",
         image:"IMAGES/salade_de_riz.webp",
         prep_active:"30",
@@ -2351,7 +2351,7 @@ const recettes =  [
         fait:true,
         vegetarien:true,
         etoiles:2,
-        saison:[8],
+        saison:[],
         nb_personnes:"4 personnes",
         ustensiles:["cuisson"],
         ingredients1Name:"",
@@ -2402,14 +2402,6 @@ const slider_a = document.getElementById("main-icon-slider");
 
 
 /* FONCTIONS ADDEVENTLISTENERs */
-
-slider_a.addEventListener("pointerdown", () => {
-    slider_a.classList.add("appuye");
-});
-
-slider_a.addEventListener("pointerup", () => {
-    slider_a.classList.remove("appuye");
-});
 
 barrederecherche.addEventListener("input", function(e) {
     rechercher();
@@ -2851,7 +2843,7 @@ function mode_nuit(){
         let link = document.createElement("link");
         link.setAttribute("rel", "stylesheet")
         link.setAttribute("type", "text/css")
-        link.setAttribute("href", "style_modesombre.css?v=2.1")
+        link.setAttribute("href", "style_modesombre.css?v=2.2")
         link.setAttribute("id", "newstylesheet")
         head.appendChild(link);
 
@@ -2882,10 +2874,10 @@ function mode_nuit(){
         document.getElementById("credits-img-2").classList.remove("cache");
         document.getElementById("guide-img-1").classList.add("cache");
         document.getElementById("guide-img-2").classList.remove("cache");
-        document.getElementById("credits-img-1-grand").classList.remove("cache");
-        document.getElementById("credits-img-2-grand").classList.add("cache");
-        document.getElementById("guide-img-1-grand").classList.remove("cache");
-        document.getElementById("guide-img-2-grand").classList.add("cache");
+        document.getElementById("credits-img-1-grand").classList.add("cache");
+        document.getElementById("credits-img-2-grand").classList.remove("cache");
+        document.getElementById("guide-img-1-grand").classList.add("cache");
+        document.getElementById("guide-img-2-grand").classList.remove("cache");
 
         document.getElementById("accueil").style.backgroundImage = "url(IMAGES/pattern_bouffe_noir.png)";
         document.getElementById("header").style.boxShadow = "0px 0px 10px black";
@@ -3653,14 +3645,14 @@ function ajustement_de_placeholder(){
 }
 
 function chargementdesinfos(){
-    mode_nuit_defaut();
+    /* mode_nuit_defaut(); */
     charger_recettesdumoment();
     charger_recettesveggies()
     charger_recettesflemme();
     charger_catalogue();
     charger_champ_recherche();
     ajustement_de_placeholder();
-    
+    mode_nuit();
 }
 
 function link(id) {

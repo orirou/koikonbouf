@@ -11,7 +11,7 @@
     <link rel="icon" sizes="96x96" href="IMAGES/citron96.png" type="image/png">
 	<title>Koikonbouf</title>
     <meta name="description" content="Koikonbouf est un site de cuisine hebergeant de nombreuses recettes, ajoutées à la main par son créateur. Les recettes sont faciles d'accès, bien guidées, et triées par genre.">
-	<link href="style.css?v=2.1" rel="stylesheet">
+	<link href="style.css?v=2.2" rel="stylesheet">
     <script src="data.js" defer></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.4.0/gsap.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
@@ -75,10 +75,10 @@
 
         <header class="header" id="header">
             <ul id="ul-header">
-                <li id="li0"><a onclick="vers_laccueil()"><img src="IMAGES/accueil1_black.png"><p id="text-header-ordi">Accueil</p></a></li>
-                <li id="li0bis" class="cache"><a onclick="vers_laccueil()"><img src="IMAGES/accueil2_black.png"><p id="text-header-ordi">Accueil</p></a></li>
+                <li id="li0" class="cache"><a onclick="vers_laccueil()"><img src="IMAGES/accueil1_black.png"><p id="text-header-ordi">Accueil</p></a></li>
+                <li id="li0bis" class="gris"><a onclick="vers_laccueil()"><img src="IMAGES/accueil2_black.png"><p id="text-header-ordi">Accueil</p></a></li>
                 <li id="li0nuit" class="cache"><a onclick="vers_laccueil()"><img src="IMAGES/accueil1_white.png"><p id="text-header-ordi">Accueil</p></a></li>
-                <li id="li0nuitbis" class="cache gris"><a onclick="vers_laccueil()"><img src="IMAGES/accueil2_white.png"><p id="text-header-ordi">Accueil</p></a></li>
+                <li id="li0nuitbis" class="cache"><a onclick="vers_laccueil()"><img src="IMAGES/accueil2_white.png"><p id="text-header-ordi">Accueil</p></a></li>
 
 
                 <li id="li1"><a onclick="vers_le_catalogue()"><img src="IMAGES/catalogue_icon.png"><p id="text-header-ordi">Catalogue</p></a></li>
@@ -91,7 +91,8 @@
                 <li id="li4bis" class="cache"><a onclick="apparaitre_searchbar()"><img src="IMAGES/icon_search_white2.png"><p id="text-header-ordi">Recherche</p></a></li>
                 <li id="switch">
                     <div>
-                        <input type="checkbox" switch id="test1" class="journuit" onchange="mode_nuit()" checked >
+                        <!-- <input type="checkbox" switch id="test1" class="journuit" onchange="mode_nuit()" checked > -->
+                        <input type="checkbox" switch id="test1" class="journuit" onchange="mode_nuit()" >
                         <label for="test1"></label>
                     </div>
                     <p id="text-header-ordi-switch">Mode jour/nuit</p>
@@ -102,12 +103,12 @@
         <slider id="slider_grand">
             <a onclick="apparaitre_tutoriel()">
                 <img id="guide-img-1-grand" src="IMAGES/guide_black.png">
-                <img id="guide-img-2-grand" src="IMAGES/guide.png">
+                <img id="guide-img-2-grand" src="IMAGES/guide.png" class="cache">
                 <p id="text-header-ordi">Didacticiel</p>
             </a>
             <button commandFor="credits" command="toggle-popover">
                 <img id="credits-img-1-grand" src="IMAGES/credits.png">
-                <img id="credits-img-2-grand" src="IMAGES/credits_white.png">
+                <img id="credits-img-2-grand" src="IMAGES/credits_white.png" class="cache">
                 <p id="text-header-ordi">Crédits</p>
             </button>
         </slider>
@@ -121,18 +122,18 @@
         </a>
         <a id="guide" onclick="apparaitre_tutoriel()">
             <img id="guide-img-1" src="IMAGES/guide_black.png">
-            <img id="guide-img-2" src="IMAGES/guide.png">
+            <img id="guide-img-2" src="IMAGES/guide.png" class="cache">
         </a>
         <button commandFor="credits" command="toggle-popover">
             <img id="credits-img-1" src="IMAGES/credits.png">
-            <img id="credits-img-2" src="IMAGES/credits_white.png">
+            <img id="credits-img-2" src="IMAGES/credits_white.png" class="cache">
         </button>
         </div>
     </slider>
     
     <div class="searchbar cache" id="searchbar">
         <div id="sur-barrerecherche">
-            <a id="retour" onclick="disparaitre_searchbar()"><img src="IMAGES/fleche_black.png" id="img-fleche1"><img src="IMAGES/fleche_white.png" id="img-fleche2"></a>
+            <a id="retour" onclick="disparaitre_searchbar()"><img src="IMAGES/fleche_black.png" id="img-fleche1"><img src="IMAGES/fleche_white.png" id="img-fleche2" class="cache"></a>
             <input type="search" id="barrerecherche" placeholder="Trouver de l'inspiration...">
             <button id="filtre" commandFor="filter_menu" command="toggle-popover"><img src="IMAGES/filtre.png" id="img-filtre"><img src="IMAGES/filtre_white.png" class="cache" id="img-filtre-white"></button>
         </div>
@@ -227,8 +228,8 @@
             <div class="txt-tutoriel">
                 <h6 class="yellow-tutoriel">Crédits</h6>
                 <p>Les icones du site Koikonbouf proviennent de <a href="https://icones8.fr" target="_blank">Icons8</a> et de <a href="https://www.flaticon.com" target="_blank"> Flaticon</a> 
-                (crées par <a href="https://www.flaticon.com/fr/icones-gratuites/bouton-daccueil" target="_blank">Pixel perfect</a> et <a href="https://www.flaticon.com/fr/icones-gratuites/la-fleche" target="_blank">Catalin Fertu</a>). L'illustration de fond a été crée par <a href="https://www.dreamstime.com/notkoo2008_info" target="_blank">Notkoo2008</a>. <br>
-                <br>Créé par <a href="https://github.com/orirou/koikonbouf" target="_blank">orirou</a>. Code disponible sur <a href="https://github.com/orirou/koikonbouf" target="_blank">GitHub</a>.
+                (crées par <a href="https://www.flaticon.com/fr/icones-gratuites/bouton-daccueil" target="_blank">Pixel perfect</a> et <a href="https://www.flaticon.com/fr/icones-gratuites/la-fleche" target="_blank">Catalin Fertu</a>). L'illustration de fond a été créée par <a href="https://www.dreamstime.com/notkoo2008_info" target="_blank">Notkoo2008</a>. <br>
+                <br>Site développé par <a href="https://github.com/orirou/koikonbouf" target="_blank">orirou</a> (code disponible sur <a href="https://github.com/orirou/koikonbouf" target="_blank">GitHub)</a>.
             </div>
     </div>
 
