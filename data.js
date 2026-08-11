@@ -1237,7 +1237,7 @@ const recettes =  [
         vegetarien:false,
         etoiles:3,
         saison:[6,7,8],
-        nb_personnes:"1 tarte (28cm de diamètre)",
+        nb_personnes:"1 tarte (26/27cm de diamètre)",
         ustensiles:["four"],
         ingredients1Name:"",
         ingredients1:["200g de farine", "125g de beurre demi-sel pommade", "50g de sucre", "1 œuf", "100g de poudre d'amandes", "25g de graines de pavot (optionnel)"],
@@ -1256,7 +1256,7 @@ const recettes =  [
         ],
         preparation2:["Préchauffer le four à 180°C",
             "Beurrer un moule classique. On pourra ajouter du sucre sur les bords selon l'envie.",
-            "Sortir la pâte du réfrigérateur et la travailler encore puis l'étaler. L'insérer dans le moule.",
+            "Sortir la pâte du réfrigérateur et la travailler encore puis l'étaler. L'insérer dans le moule (conseil : faire des bords épais parce que c'est meilleur !).",
             "Enfourner pour 15 minutes à 180°C.",
             "Pour une dorure parfaite : étaler un jaune d'œuf battu avec de l'eau sur la tarte, et réenfourner 5 minutes à 180°C."
         ],
@@ -2341,6 +2341,37 @@ const recettes =  [
         ],
         preparation3:[""],
     },
+    {
+        nom:"Salade de riz",
+        id:"salade crudité riz frais été plat froid",
+        type:"entree",
+        image:"IMAGES/salade_de_riz.webp",
+        prep_active:"30",
+        prep_totale:"90",
+        fait:true,
+        vegetarien:true,
+        etoiles:2,
+        saison:[8],
+        nb_personnes:"4 personnes",
+        ustensiles:["cuisson"],
+        ingredients1Name:"",
+        ingredients1:["1 verre de riz",  "4 œufs durs"],
+        ingredients2Name:"Crudités",
+        ingredients2:["1 boîte de thon à la tomate", "2 tomates", "1 oignon", "1 boîte de maïs",
+            "1/2 poivron (optionnel)", "des cubes de fromage (optionnel)",],
+        ingredients3Name:"",
+        ingredients3:[""],
+        repere1: "",
+        repere2: "", 
+        repere3: "",
+        preparation1:["Faire bouillir de l'eau dans une casserole, puis y déposer le riz et les œufs (pendant 10 minutes).",
+            "Pendant ce temps, préparer les crudités : couper finement l'oignon, les tomates, et les autres ingrédients.",
+            "Au bout de 10 minutes, enlever les œufs durs et laisser refroidir. Récupérer le riz cuit.",
+            "Dans un saladier, mélanger tous les ingrédients. Réserver au frais.",
+        ],
+        preparation2:[""],
+        preparation3:[""],
+    },
 ]
 
 
@@ -2367,9 +2398,18 @@ const recette = document.getElementById("conteneur");
 const menu_de_filtrage = document.getElementById("filter_menu");
 const croix = document.getElementById("croix");
 const barrederecherche = document.getElementById("barrerecherche");
+const slider_a = document.getElementById("main-icon-slider");
 
 
 /* FONCTIONS ADDEVENTLISTENERs */
+
+slider_a.addEventListener("pointerdown", () => {
+    slider_a.classList.add("appuye");
+});
+
+slider_a.addEventListener("pointerup", () => {
+    slider_a.classList.remove("appuye");
+});
 
 barrederecherche.addEventListener("input", function(e) {
     rechercher();
@@ -2468,24 +2508,24 @@ window.addEventListener("scroll", () => {
     let scrollActuelAccueil = window.scrollY;
 
     let mql = window.matchMedia("(width < 800px)");
-
-    /* && scrollActuelAccueil > 0 */
     
     if (mql.matches){
     // le header se rapetisse
-    if (scrollActuelAccueil > dernierScrollAccueil + 5 ) {
+    if (scrollActuelAccueil > dernierScrollAccueil + 5 && scrollActuelAccueil > 0) {
         surheader.classList.add("header-ultra-compact");
         ul.classList.add("ul-compact");
         slider.classList.add("slider-compact");
-    } else if (scrollActuelAccueil > dernierScrollAccueil + 1){
+        slider.classList.remove("slider-déplié");
+    } else if (scrollActuelAccueil > dernierScrollAccueil + 1 && scrollActuelAccueil > 0){
         surheader.classList.add("header-compact");
         slider.classList.add("slider-compact");
+        slider.classList.remove("slider-déplié");
     }
     // le header remonte
-    else if ((scrollActuelAccueil < dernierScrollAccueil - 1) && (scrollActuelAccueil < 100)){
+    else if ((scrollActuelAccueil < dernierScrollAccueil - 1 || scrollActuelAccueil <= 0) && (scrollActuelAccueil < 100)){
             slider.classList.remove("slider-compact");
         }
-    else if (scrollActuelAccueil < dernierScrollAccueil - 1) {
+    else if ((scrollActuelAccueil < dernierScrollAccueil - 1) || (scrollActuelAccueil <= 0)) {
         surheader.classList.remove("header-compact");
         surheader.classList.remove("header-ultra-compact");
         ul.classList.remove("ul-compact");
@@ -2851,6 +2891,7 @@ function mode_nuit(){
         document.getElementById("header").style.boxShadow = "0px 0px 10px black";
         document.getElementById("slider").style.boxShadow = "0px 0px 10px black";
         document.getElementById("slider_grand").style.boxShadow = "0px 0px 10px black";
+        document.getElementById("filtre").style.backgroundColor = "rgba(30, 30, 30, 0.8)"
     }
 
     if (document.getElementById("test1").checked === false){
@@ -2892,6 +2933,7 @@ function mode_nuit(){
         document.getElementById("header").style.boxShadow = "0px 0px 10px grey";
         document.getElementById("slider").style.boxShadow = "0px 0px 10px grey";
         document.getElementById("slider_grand").style.boxShadow = "0px 0px 10px grey";
+        document.getElementById("filtre").style.backgroundColor = "rgba(255, 255, 255, 0.8)"
     }
     vers_laccueil()
 }
@@ -2937,6 +2979,7 @@ function mode_nuit_defaut(){
     document.getElementById("header").style.boxShadow = "0px 0px 10px black";
     document.getElementById("slider").style.boxShadow = "0px 0px 10px black";
     document.getElementById("slider_grand").style.boxShadow = "0px 0px 10px black";
+    document.getElementById("filtre").style.backgroundColor = "rgba(30, 30, 30, 0.8)";
 }
 
 /* DIV POUR LE TUTORIEL */ 
@@ -3499,16 +3542,16 @@ function charger_catalogue (){
     };
     liste_noms.sort();
 
-    let type_pastas = document.getElementById("c1");
-    let type_viandes = document.getElementById("c2");
-    let type_desserts = document.getElementById("c3");
-    let type_tartes = document.getElementById("c4");
-    let type_aperitifs = document.getElementById("c5");
-    let type_boissons = document.getElementById("c6");
+    let type_pastas = document.getElementById("c3");
+    let type_viandes = document.getElementById("c6");
+    let type_desserts = document.getElementById("c1");
+    let type_tartes = document.getElementById("c2");
+    let type_aperitifs = document.getElementById("c9");
+    let type_boissons = document.getElementById("c10");
     let type_pains = document.getElementById("c7");
-    let type_riz = document.getElementById("c8");
-    let type_entree = document.getElementById("c9");
-    let type_legumes = document.getElementById("c10");
+    let type_riz = document.getElementById("c4");
+    let type_entree = document.getElementById("c8");
+    let type_legumes = document.getElementById("c5");
     let type_pates = document.getElementById("c11");
     let type_sauces = document.getElementById("c12");
 
