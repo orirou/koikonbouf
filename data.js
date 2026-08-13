@@ -1424,8 +1424,8 @@ const recettes =  [
         id:"coco_paimpol",
         type:"legume",
         image:"IMAGES/coco_paimpol.jpg",
-        prep_active:20,
-        prep_totale:110,
+        prep_active:30,
+        prep_totale:120,
         fait:true,
         vegetarien:true,
         etoiles:2,
@@ -1433,7 +1433,7 @@ const recettes =  [
         nb_personnes:"4 personnes",
         ustensiles:["cuisson",],
         ingredients1Name:"",
-        ingredients1:["500g de cocos paimpolais", "300g de tomates", "2 carottes", "1 bouillon-cube (4g)", "2 gousses d'ail", "2 oignons", "2 échalotes", "Thym / sel /poivre"],
+        ingredients1:["500g de cocos paimpolais", "300g de tomates", "2 carottes", "1 bouillon-cube (4g)", "2 gousses d'ail", "2 oignons", "Thym / sel / poivre"],
         ingredients2Name:"",
         ingredients2:[],
         ingredients3Name:"",
@@ -2372,6 +2372,37 @@ const recettes =  [
         preparation2:[""],
         preparation3:[""],
     },
+    {
+        nom:"Mousse au chocolat",
+        id:"gateau chocolat mousse aux oeufs",
+        type:"dessert",
+        image:"IMAGES/mousse_au_chocolat.webp",
+        prep_active:"30",
+        prep_totale:"90",
+        fait:false,
+        vegetarien:false,
+        etoiles:0,
+        saison:[],
+        nb_personnes:"4 personnes",
+        ustensiles:["batteur"],
+        ingredients1Name:"",
+        ingredients1:["125g de Nestlé Dessert Corsé", "75g de beurre demi-sel", "25g de sucre", "3 œufs frais",],
+        ingredients2Name:"",
+        ingredients2:[],
+        ingredients3Name:"",
+        ingredients3:[""],
+        repere1: "",
+        repere2: "", 
+        repere3: "",
+        preparation1:["Faire fondre le chocolat au bain-marie.",
+            "Séparer les blancs des jaunes d'œufs. Monter les blancs en neige ferme en ajoutant le sucre à mi-parcours.",
+            "Transvaser le chocolat fondu dans un saladier. Ajouter le beurre petit à petit en fouettant, puis les jaunes d’œufs.",
+            "Prélever un tiers des blancs et les mélanger au chocolat à l’aide d’un fouet. Incorporer le restant délicatement à la maryse.",
+            "Répartir la préparation dans 4 ramequins. Les réserver au frais pour 3h."
+        ],
+        preparation2:[""],
+        preparation3:[""],
+    },
 ]
 
 
@@ -2682,15 +2713,12 @@ function apparaitre_searchbar(){
     }
     MaTimeline
     .add(() => {
-    barrederecherche.focus();
-    barrederecherche.select();
     surheader.classList.remove("header-compact");
     console.log("retiré")
     surheader.classList.remove("header-ultra-compact");
-    /* slider.classList.remove("slider-compact"); */
     ul.classList.remove("ul-compact");
-    /* imgslider1.classList.remove("imgslider1-compact");
-    imgslider2.classList.remove("imgslider2-compact"); */
+    /* barrederecherche.focus();
+    barrederecherche.select(); */
     })
 
     }
