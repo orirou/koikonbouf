@@ -188,9 +188,9 @@
             </div>
             <div class="txt-tutoriel">
                 <h6 class="yellow-tutoriel">Des dizaines de recettes à portée de main</h6>
-                <p class="blanc-tuto">Retrouvez une quantité astronomique de recettes classées par catégorie. Chaque recette comporte ses ingrédients dédiés, son temps de préparation détaillé, et un guide précis pour la réussir comme un chef.</p>
-                <img class="img-tutoriel" src="IMAGES/tuto1.webp">
-                <p class="blanc-tuto">Les recettes sont souvent mises à jour, pour permettre d'évoluer vers des recettes toujours meilleures.</p>
+                <p>Retrouvez une quantité astronomique de recettes classées par catégorie. Chaque recette comporte ses ingrédients dédiés, son temps de préparation détaillé, et un guide précis pour la réussir comme un chef.</p>
+                <img class="img-tutoriel" id="t1" src="IMAGES/tuto1.webp"><img class="img-tutoriel" id="t1b" src="IMAGES/tuto1-blanc.webp">
+                <p>Les recettes sont souvent mises à jour, pour permettre d'évoluer vers des recettes toujours meilleures.</p>
             </div>
             <button class="suivant1" onclick="suivant_tutoriel()"><h6 class="next1">Suivant</h6></button>
         </div>
@@ -201,9 +201,9 @@
             </div>
             <div class="txt-tutoriel">
                 <h6 class="yellow-tutoriel">Des avis précieux pour vous guider</h6>
-                <p class="blanc-tuto">Le badge "recette approuvée" est présent sur des recettes lorsqu'elles sont considérées comme fiables car suffisamment testées.</p>
-                <img class="img-tutoriel" src="IMAGES/tuto2.webp">
-                <p class="blanc-tuto">Les recettes approuvées comportent aussi une note sur 3 citrons, pour que vous vous fiiez à cet avis.</p>
+                <p>Le badge "recette approuvée" est présent sur des recettes lorsqu'elles sont considérées comme fiables car suffisamment testées.</p>
+                <img class="img-tutoriel" id="t2" src="IMAGES/tuto2.webp"><img class="img-tutoriel" id="t2b" src="IMAGES/tuto2-blanc.webp">
+                <p>Les recettes approuvées comportent aussi une note sur 3 citrons, pour que vous vous fiiez à cet avis.</p>
             </div>
             <button class="suivant2" onclick="suivant_tutoriel()"><h6 class="next2">Suivant</h6></button>
         </div>
@@ -214,9 +214,9 @@
             </div>
             <div class="txt-tutoriel">
                 <h6 class="yellow-tutoriel">Une simplicité d'organisation abracadabrantesque</h6>
-                <p class="blanc-tuto">Grâce à l'onglet "Recherche", retrouvez en un claquement de doigt votre recette favorite. Découvrez aussi le catalogue culinaire, où toutes les recettes sont répertoriées par genre.</p>
-                <img class="img-tutoriel" src="IMAGES/tuto3.webp">
-                <p class="blanc-tuto">Allez vite découvrir le catalogue culinaire et ses nombreux secrets à couper le souffle !</p>
+                <p>Grâce à l'onglet "Recherche", retrouvez en un claquement de doigt votre recette favorite. Découvrez aussi le catalogue culinaire, où toutes les recettes sont répertoriées par genre.</p>
+                <img class="img-tutoriel" id="t3" src="IMAGES/tuto3.webp"><img class="img-tutoriel" id="t3b" src="IMAGES/tuto3-blanc.webp">
+                <p>Allez vite découvrir le catalogue culinaire et ses nombreux secrets à couper le souffle !</p>
             </div>
             <button class="suivant3" onclick="suivant_tutoriel()"><h6 class="next3">Aller au catalogue</h6></button>
         </div>
@@ -242,7 +242,8 @@
         <section id="accueil">
             <div>
                 <h2 class="supertitre">Koikonbouf</h2>
-                <input type="search" class="big-think" id="big-think" onchange="rechercher()">
+                <!-- <input type="search" class="big-think" id="big-think" onchange="rechercher()"> -->
+                <button id="big-think"><img src="IMAGES/icon_search.png" id="img-search"><p id="text-search"></p></button>
             </div>
         </section>
 

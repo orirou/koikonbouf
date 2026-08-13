@@ -2713,12 +2713,12 @@ function apparaitre_searchbar(){
     }
     MaTimeline
     .add(() => {
+    barrederecherche.focus();
+    barrederecherche.select();
     surheader.classList.remove("header-compact");
     console.log("retiré")
     surheader.classList.remove("header-ultra-compact");
     ul.classList.remove("ul-compact");
-    /* barrederecherche.focus();
-    barrederecherche.select(); */
     })
 
     }
@@ -2898,6 +2898,13 @@ function mode_nuit(){
         document.getElementById("img-fleche1").classList.add("cache");
         document.getElementById("img-fleche2").classList.remove("cache");
 
+        document.getElementById("t1b").classList.add("cache");
+        document.getElementById("t1").classList.remove("cache");
+        document.getElementById("t2b").classList.add("cache");
+        document.getElementById("t2").classList.remove("cache");
+        document.getElementById("t3b").classList.add("cache");
+        document.getElementById("t3").classList.remove("cache");
+
         document.getElementById("credits-img-1").classList.add("cache");
         document.getElementById("credits-img-2").classList.remove("cache");
         document.getElementById("guide-img-1").classList.add("cache");
@@ -2916,7 +2923,9 @@ function mode_nuit(){
 
     if (document.getElementById("test1").checked === false){
         let link = document.getElementById("newstylesheet");
-        link.remove()
+        if (link != null) {
+            link.remove()
+        }
         
         document.getElementById("li0").classList.remove("cache");
         document.getElementById("li1").classList.remove("cache");
@@ -2939,6 +2948,13 @@ function mode_nuit(){
         document.getElementById("img-filtre").classList.remove("cache");
         document.getElementById("img-fleche1").classList.remove("cache");
         document.getElementById("img-fleche2").classList.add("cache");
+
+        document.getElementById("t1b").classList.remove("cache");
+        document.getElementById("t1").classList.add("cache");
+        document.getElementById("t2b").classList.remove("cache");
+        document.getElementById("t2").classList.add("cache");
+        document.getElementById("t3b").classList.remove("cache");
+        document.getElementById("t3").classList.add("cache");
 
         document.getElementById("credits-img-1").classList.remove("cache");
         document.getElementById("credits-img-2").classList.add("cache");
@@ -3656,18 +3672,36 @@ function charger_catalogue (){
 }
 
 function ajustement_de_placeholder(){
+    document.getElementById("img-search").remove()
+    document.getElementById("text-search").remove()
+
+    let image = document.createElement("img");
+    image.setAttribute("src", "IMAGES/icon_search.png");
+    image.setAttribute("id", "img-search");
+
+    let text_content = document.createElement("p");
+    text_content.setAttribute("id", "text-search");
+
     let mql = window.matchMedia("(width >= 470px)");
     if (mql.matches){
         let longueur_recette = Object.keys(recettes).length;
         let input_central = document.getElementById("big-think");
         let input_onglet = document.getElementById("barrerecherche");
-        input_central.placeholder = "Trouver de l'inspiration parmi " + longueur_recette + " recettes..."
+        text_content.innerHTML = "Trouver de l'inspiration parmi " + longueur_recette + " recettes..."
+
+        input_central.appendChild(image);
+        input_central.appendChild(text_content);
+        /* input_central.textContent = "Trouver de l'inspiration parmi " + longueur_recette + " recettes..." */
         input_onglet.placeholder = "Trouver de l'inspiration parmi " + longueur_recette + " recettes..."
     } else {
         let longueur_recette = Object.keys(recettes).length;
         let input_central = document.getElementById("big-think");
         let input_onglet = document.getElementById("barrerecherche");
-        input_central.placeholder = "Trouver de l'inspiration..."
+        text_content.innerHTML = "Trouver de l'inspiration..."
+
+        input_central.appendChild(image);
+        input_central.appendChild(text_content);
+        /* input_central.textContent = "Trouver de l'inspiration..." */
         input_onglet.placeholder = "Trouver de l'inspiration..."
     }
 }
