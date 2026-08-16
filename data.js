@@ -115,7 +115,7 @@ const recettes =  [
         repere2: "Préparation de la crème",
         repere3: "Biscuits & dressage",
         ingredients1Name:"",
-        ingredients1:["500g de mascarpone", "15 biscuits à la cuillère", "50 g de sucre", "5 œufs", "6 cas de cacao amer", "1 tasse de café", "Optionnel : 10 spéculos"],
+        ingredients1:["500g de mascarpone", "15 biscuits à la cuillère", "50 g de sucre", "5 œufs", "6 cas de cacao amer", "1 tasse de café", "125g de spéculos (optionnel)"],
         ingredients2Name:"",
         ingredients2:[],
         ingredients3Name:"",
@@ -148,7 +148,7 @@ const recettes =  [
         repere2: "Préparation de la base de spéculoos",
         repere3: "Crème, biscuits & dressage",
         ingredients1Name:"",
-        ingredients1:["500g de mascarpone", "15 biscuits à la cuillère", "1 bol de lait", "30g de beurre fondu", "Optionnel : 125g de spéculos",],
+        ingredients1:["500g de mascarpone", "15 biscuits à la cuillère", "1 bol de lait", "30g de beurre fondu", "125g de spéculos (optionnel)",],
         ingredients2Name:"Lemon curd",
         ingredients2:[ "3 citrons", "4 œufs", "80g de sucre", "30g de beurre"],
         ingredients3Name:"",
@@ -216,7 +216,7 @@ const recettes =  [
         repere2: "",
         repere3: "",
         ingredients1Name:"",
-        ingredients1:["400g de rumsteack coupé en morceaux",  "2 poivrons (1 rouge et 1 vert)", "Optionnel : des nouilles chinoises ou du riz"],
+        ingredients1:["400g de rumsteack coupé en morceaux",  "2 poivrons (1 rouge et 1 vert)", "Nouilles chinoises ou riz (accompagnement)"],
         ingredients2Name:"Marinade",
         ingredients2:["1 échalote", "1 gousse d'ail", "4 cas de sauce soja salée", "3 cas d'huile neutre", "1 cas d'huile de sésame (ou 2 cas d’huile d’olive)", "1 gingembre coupé en lamelles (ou 1/2 cas de gingembre en poudre)",],
         ingredients3Name:"",
@@ -373,7 +373,7 @@ const recettes =  [
         repere2: "",
         repere3: "",
         ingredients1Name:"",
-        ingredients1:["4 escalopes de dinde", "250g de champignons de Paris", "1 échalotte", "2 gousses d'ail", "20cL de crème fraîche", "Sel / Poivre / Basilic / Cumin", "Optionnel : lardons, roquefort",],
+        ingredients1:["4 escalopes de dinde", "250g de champignons de Paris", "1 échalotte", "2 gousses d'ail", "20cL de crème fraîche", "Sel / Poivre / Basilic / Cumin", "Options : lardons, roquefort",],
         ingredients2Name:"",
         ingredients2:[],
         ingredients3Name:"",
@@ -655,7 +655,7 @@ const recettes =  [
         nb_personnes:"8 personnes",
         ustensiles:["four"],
         ingredients1Name:"",
-        ingredients1:["4 pommes", "1 citron", "75g de farine", "50g de sucre", "50g de beurre à moitié fondu", "100ml de lait", "2 œufs", "1 sachet (10g) de levure chimique", "Optionnel : vanille en poudre, sucre glace pour le topping, canelle..."],
+        ingredients1:["4 pommes", "1 citron", "75g de farine", "50g de sucre", "50g de beurre à moitié fondu", "100ml de lait", "2 œufs", "1 sachet (10g) de levure chimique", "Vanille en poudre", "Options : sucre glace pour le topping, canelle...",],
         ingredients2Name:"",
         ingredients2:[],
         ingredients3Name:"",
@@ -909,7 +909,7 @@ const recettes =  [
         nb_personnes:"4 personnes",
         ustensiles:["cuisson", "four"],
         ingredients1Name:"",
-        ingredients1:["250 à 350g max de pruneaux dénoyautés", "6 œufs", "1L de lait", "250g de farine", "150g de sucre + un peu pour le moule", "100g de beurre salé + un peu pour le moule", "Optionnel : vanille"],
+        ingredients1:["250 à 350g max de pruneaux dénoyautés", "6 œufs", "1L de lait", "250g de farine", "150g de sucre + un peu pour le moule", "100g de beurre salé + un peu pour le moule", "Vanille en poudre (optionnel)"],
         ingredients2Name:"",
         ingredients2:[],
         ingredients3Name:"",
@@ -942,7 +942,7 @@ const recettes =  [
         nb_personnes:"4 personnes",
         ustensiles:["cuisson"],
         ingredients1Name:"",
-        ingredients1:["400g de pâtes", "300g de bœuf haché", "2 tomates", "1 carotte", "2 oignons", "2 gousse d'ail", "40cL (400g) de purée de tomate", "Gruyère râpé / parmesan", "Poivre / Sel / Épices (Basilic, Thym, Laurier)", "Optionnel : un carreau de chocolat"],
+        ingredients1:["400g de pâtes", "300g de bœuf haché", "2 tomates", "1 carotte", "2 oignons", "2 gousse d'ail", "40cL (400g) de purée de tomate", "Gruyère râpé / parmesan", "Poivre / Sel / Épices (Basilic, Thym, Laurier)",],
         ingredients2Name:"Alternative veggie",
         ingredients2:["bœuf hâché --> champignons de Paris"],
         ingredients3Name:"",
@@ -973,7 +973,7 @@ const recettes =  [
         nb_personnes:"1 personne",
         ustensiles:["four"],
         ingredients1Name:"",
-        ingredients1:["1 filet de saumon", "1 filet d'huile d'olive", "Sel / poivre / herbes de provence", "Optionnel : citron",],
+        ingredients1:["1 filet de saumon", "1 filet d'huile d'olive", "Sel / poivre / herbes de provence", "1 jus d'un citron (optionnel)",],
         ingredients2Name:"",
         ingredients2:[],
         ingredients3Name:"",
@@ -1208,7 +1208,7 @@ const recettes =  [
         nb_personnes:"4 personnes",
         ustensiles:["cuisson"],
         ingredients1Name:"",
-        ingredients1:["250g de bœuf haché", "1 petite boite de haricots rouges", "70g de concentré de tomate", "200g de pulpe de tomates/tomates pelées", "1 oignon", "1 gousse d'ail", "Sel / Poivre / 1 cac de sucre", "2 cac de cumin / 1 cac de chili ou 1 cac de paprika + origan + tabasco selon goût / un carré de chocolat noir", "Optionnel: 1 petite boîte de maïs + bouillon de bœuf"],
+        ingredients1:["250g de bœuf haché", "1 petite boite de haricots rouges", "70g de concentré de tomate", "200g de pulpe de tomates/tomates pelées", "1 oignon", "1 gousse d'ail", "Sel / Poivre / 1 cac de sucre", "2 cac de cumin / 1 cac de chili ou 1 cac de paprika + origan + tabasco selon goût / un carré de chocolat noir", "Options: 1 petite boîte de maïs + bouillon de bœuf"],
         ingredients2Name:"",
         ingredients2:[],
         ingredients3Name:"",
@@ -1421,7 +1421,7 @@ const recettes =  [
     },
     {
         nom:"Cocos paimpolais",
-        id:"coco_paimpol",
+        id:"cocos paimpol haricots",
         type:"legume",
         image:"IMAGES/coco_paimpol.jpg",
         prep_active:30,
@@ -1430,10 +1430,10 @@ const recettes =  [
         vegetarien:true,
         etoiles:2,
         saison:"",
-        nb_personnes:"4 personnes",
+        nb_personnes:"6 personnes",
         ustensiles:["cuisson",],
         ingredients1Name:"",
-        ingredients1:["500g de cocos paimpolais", "300g de tomates", "2 carottes", "1 bouillon-cube (4g)", "2 gousses d'ail", "2 oignons", "Thym / sel / poivre"],
+        ingredients1:["500g de cocos paimpolais", "300g de tomates", "2 carottes", "1 bouillon-cube (4g)", "2 oignons", "2 gousses d'ail", "Thym / sel / poivre"],
         ingredients2Name:"",
         ingredients2:[],
         ingredients3Name:"",
@@ -1613,7 +1613,7 @@ const recettes =  [
         nb_personnes:"10 galettes environ",
         ustensiles:[],
         ingredients1Name:"",
-        ingredients1:["400g de farine de blé noir", "1 pincée de sel", "900mL d'eau (2/3 puis 1/3)", "Optionnel : 1 œuf"],
+        ingredients1:["400g de farine de blé noir", "1 pincée de sel", "900mL d'eau (2/3 puis 1/3)", "1 œuf (optionnel)"],
         ingredients2Name:"",
         ingredients2:[],
         ingredients3Name:"",
@@ -1810,7 +1810,7 @@ const recettes =  [
         nb_personnes:"4 personnes",
         ustensiles:["cuisson",],
         ingredients1Name:"",
-        ingredients1:["4 blancs de poulet", "1 oignon", "1 gousse d'ail", "150g de yaourt", "1 tomate", "1 citron vert", "70g de concentré de tomate", "Poivre / Piment / Cumin / Curcuma / Gingembre / Garam massala (voir ci-dessous)", "Optionnel : noix de cajou"],
+        ingredients1:["4 blancs de poulet", "1 oignon", "1 gousse d'ail", "150g de yaourt", "1 tomate", "1 citron vert", "70g de concentré de tomate", "Poivre / Piment / Cumin / Curcuma / Gingembre / Garam massala (voir ci-dessous)", "Option : noix de cajou"],
         ingredients2Name:"",
         ingredients2:[],
         ingredients3Name:"",
@@ -1854,7 +1854,7 @@ const recettes =  [
         nb_personnes:"4 personnes",
         ustensiles:["mixeur"],
         ingredients1Name:"",
-        ingredients1:["5 citrons verts bio (de préférence des brésiliens car la peau est fine)", "200g de lait concentré sucré", "50g de sucre", "500mL d'eau + de l'eau gazeuse", "Optionnel : 150g de fraises ou de framboises (pour une limonade à la fraise/framboise)"],
+        ingredients1:["5 citrons verts bio (de préférence des brésiliens car la peau est fine)", "200g de lait concentré sucré", "50g de sucre", "500mL d'eau + de l'eau gazeuse", "Option : 150g de fraises ou de framboises (pour une limonade à la fraise/framboise)"],
         ingredients2Name:"",
         ingredients2:[],
         ingredients3Name:"",
@@ -1923,7 +1923,7 @@ const recettes =  [
         nb_personnes:"",
         ustensiles:["cuisson", "four"],
         ingredients1Name:"",
-        ingredients1:["100g de Nestlé Dessert Corsé", "20g de beurre", "100mL de lait", "Crème glacée à la vanille", "Optionnel : amandes effilées"],
+        ingredients1:["100g de Nestlé Dessert Corsé", "20g de beurre", "100mL de lait", "Crème glacée à la vanille", "50g d'amandes effilées (optionnel)"],
         ingredients2Name:"Pâte à choux",
         ingredients2:["(150g + 60g) de farine", "(100g + 50g) de beurre demi-sel", "250mL d'eau", "4 œufs", "60g de sucre roux",],
         ingredients3Name:"",
@@ -1953,7 +1953,7 @@ const recettes =  [
         nb_personnes:"4 personnes",
         ustensiles:["four"],
         ingredients1Name:"",
-        ingredients1:["800g de pommes de terre", "500mL de lait", "100g (1 sachet) de gruyère râpé", "2 œufs", "Sel / Poivre / Noix de muscade", "Optionnel : <button class='link' id='béchamel' onclick='link(this.id)'>sauce béchamel</button> aux proportions multipliées par 2"],
+        ingredients1:["800g de pommes de terre", "500mL de lait", "100g (1 sachet) de gruyère râpé", "2 œufs", "Sel / Poivre / Noix de muscade", "<button class='link' id='béchamel' onclick='link(this.id)'>Sauce béchamel</button> aux proportions multipliées par 2 (optionnel)"],
         ingredients2Name:"",
         ingredients2:[],
         ingredients3Name:"",
@@ -2021,7 +2021,7 @@ const recettes =  [
         nb_personnes:"2 personnes",
         ustensiles:["cuisson"],
         ingredients1Name:"",
-        ingredients1:["2 poireaux assez fins", "1 échalotte", "1 vinaigrette riche en moutarde", "Poivre / Ciboulette", "Optionnel : 1 bouillon kub de légumes"],
+        ingredients1:["2 poireaux assez fins", "1 échalotte", "1 vinaigrette riche en moutarde", "Poivre / Ciboulette", "1 bouillon kub de légumes (optionnel)"],
         ingredients2Name:"",
         ingredients2:[],
         ingredients3Name:"",
@@ -2109,15 +2109,15 @@ const recettes =  [
         type:"sauce",
         image:"IMAGES/thon_st_moret.webp",
         prep_active:"5",
-        prep_totale:"5",
+        prep_totale:"35",
         fait:true,
         vegetarien:false,
-        etoiles:3,
+        etoiles:2,
         saison:[],
         nb_personnes:"Proportions unitaires",
         ustensiles:[],
         ingredients1Name:"",
-        ingredients1:["300g de Saint-Morêt", "1 boîte de thon à l'eau", "1 yaourt grec", "1 citron", "1 gros bouquet de ciboulette"],
+        ingredients1:["150g de Saint-Morêt", "1 boîte (140g) de thon à l'eau ", "1 yaourt grec", "1/2 citron", "Sel / Povre / Ciboulette"],
         ingredients2Name:"",
         ingredients2:[],
         ingredients3Name:"",
@@ -2125,9 +2125,9 @@ const recettes =  [
         repere1: "",
         repere2: "",
         repere3: "",
-        preparation1:["Presser le citron, couper finement la ciboulette.",
+        preparation1:["Presser le 1/2 citron, couper finement la ciboulette.",
             "Émietter le thon avec une fourchette.",
-            "Mélanger tous les ingrédients. Réserver au frais."
+            "Mélanger tous les ingrédients, saler, poivrer. Réserver au frais pendant au moins 30 minutes."
         ],
         preparation2:[""],
         preparation3:[""],
@@ -2347,7 +2347,7 @@ const recettes =  [
         type:"entree",
         image:"IMAGES/salade_de_riz.webp",
         prep_active:"30",
-        prep_totale:"90",
+        prep_totale:"30",
         fait:true,
         vegetarien:true,
         etoiles:2,
@@ -2377,8 +2377,8 @@ const recettes =  [
         id:"gateau chocolat mousse aux oeufs",
         type:"dessert",
         image:"IMAGES/mousse_au_chocolat.webp",
-        prep_active:"30",
-        prep_totale:"90",
+        prep_active:"25",
+        prep_totale:"205",
         fait:false,
         vegetarien:false,
         etoiles:0,
@@ -2386,7 +2386,7 @@ const recettes =  [
         nb_personnes:"4 personnes",
         ustensiles:["batteur"],
         ingredients1Name:"",
-        ingredients1:["125g de Nestlé Dessert Corsé", "75g de beurre demi-sel", "25g de sucre", "3 œufs frais",],
+        ingredients1:["125g de Nestlé Dessert Corsé", "50g de beurre demi-sel", "25g de sucre", "3 œufs : 2 jaunes et 3 blancs",],
         ingredients2Name:"",
         ingredients2:[],
         ingredients3Name:"",
@@ -2394,11 +2394,43 @@ const recettes =  [
         repere1: "",
         repere2: "", 
         repere3: "",
-        preparation1:["Faire fondre le chocolat au bain-marie.",
-            "Séparer les blancs des jaunes d'œufs. Monter les blancs en neige ferme en ajoutant le sucre à mi-parcours.",
-            "Transvaser le chocolat fondu dans un saladier. Ajouter le beurre petit à petit en fouettant, puis les jaunes d’œufs.",
+        preparation1:["Faire fondre le chocolat au bain-marie. Ajouter le beurre petit à petit.",
+            "Pendant ce temps, séparer les blancs des jaunes d'œufs (ne garder que 2 jaunes d'œufs). Monter les blancs en neige ferme en ajoutant le sucre à mi-parcours.",
+            "Transvaser le chocolat fondu dans le saladier contenant les jaunes d'œufs, puis fouetter.",
             "Prélever un tiers des blancs et les mélanger au chocolat à l’aide d’un fouet. Incorporer le restant délicatement à la maryse.",
             "Répartir la préparation dans 4 ramequins. Les réserver au frais pour 3h."
+        ],
+        preparation2:[""],
+        preparation3:[""],
+    },
+    {
+        nom:"Chicken korma",
+        id:"poulet indienne inde",
+        type:"viande",
+        image:"IMAGES/chicken_korma.jpg",
+        prep_active:"?",
+        prep_totale:"?",
+        fait:false,
+        vegetarien:false,
+        etoiles:0,
+        saison:[],
+        nb_personnes:"4 personnes",
+        ustensiles:["cuisson",],
+        ingredients1Name:"",
+        ingredients1:["4 blancs de poulet (600g)", "2 oignons", "3 gousses d'ail", "250g de yaourt à la grecque", "100mL de crème liquide entière",
+             "40g de beurre", "30g d'oignons frits déshydratés", ],
+        ingredients2Name:"Fruits secs",
+        ingredients2:["50g de raisins secs", "50g de noix de cajou", "30g d'amandes effilées",],
+        ingredients3Name:"Épices",
+        ingredients3:["40g de pâte de curry vert korma de préférence", "Sel / 1 cac de cardamome en poudre / 1 cac de gingembre en poudre / 1 dose de safran",],
+        repere1: "",
+        repere2: "", 
+        repere3: "",
+        preparation1:["Dans une casserole, chauffer la crème fraîche pendant 5 min à feu doux, puis ajouter le safran et réserver dans un petit bol.",
+            "Faire rissoler les oignons avec l'ail, le gingembre, la cardamome, le beurre et la pâte de curry dans la casserole pendant 15 min à feu fort.",
+            "Ajouter le yaourt et mélanger.",
+            "Incorporer ensuite le poulet, les raisins secs et le sel. Cuire 15 min à feu moyen.",
+            "Ajouter la crème au safran et mélanger. Servir parsemé d'amandes et d'oignons frits, accompagné de riz."
         ],
         preparation2:[""],
         preparation3:[""],
@@ -2862,6 +2894,7 @@ function rechercher() {
 /* MODES JOUR/NUIT */
 
 function mode_nuit(){
+    ajustement_de_placeholder()
     surheader.classList.remove("header-compact");
     surheader.classList.remove("header-ultra-compact");
     ul.classList.remove("ul-compact");
@@ -3672,12 +3705,21 @@ function charger_catalogue (){
 }
 
 function ajustement_de_placeholder(){
-    document.getElementById("img-search").remove()
+    if (document.getElementById("img-search") != null){
+        document.getElementById("img-search").remove()
+    } 
+    if (document.getElementById("img-search-white") != null){
+        document.getElementById("img-search-white").remove()
+    }
     document.getElementById("text-search").remove()
 
     let image = document.createElement("img");
     image.setAttribute("src", "IMAGES/icon_search.png");
     image.setAttribute("id", "img-search");
+
+    let image_nuit = document.createElement("img");
+    image_nuit.setAttribute("src", "IMAGES/icon_search_white.png");
+    image_nuit.setAttribute("id", "img-search-white");
 
     let text_content = document.createElement("p");
     text_content.setAttribute("id", "text-search");
@@ -3689,7 +3731,12 @@ function ajustement_de_placeholder(){
         let input_onglet = document.getElementById("barrerecherche");
         text_content.innerHTML = "Trouver de l'inspiration parmi " + longueur_recette + " recettes..."
 
-        input_central.appendChild(image);
+        if (document.getElementById("test1").checked === true){
+            input_central.appendChild(image_nuit);
+        }
+        else {
+            input_central.appendChild(image);
+        }
         input_central.appendChild(text_content);
         /* input_central.textContent = "Trouver de l'inspiration parmi " + longueur_recette + " recettes..." */
         input_onglet.placeholder = "Trouver de l'inspiration parmi " + longueur_recette + " recettes..."
@@ -3699,7 +3746,12 @@ function ajustement_de_placeholder(){
         let input_onglet = document.getElementById("barrerecherche");
         text_content.innerHTML = "Trouver de l'inspiration..."
 
-        input_central.appendChild(image);
+        if (document.getElementById("test1").checked === true){
+            input_central.appendChild(image_nuit);
+        }
+        else {
+            input_central.appendChild(image);
+        }
         input_central.appendChild(text_content);
         /* input_central.textContent = "Trouver de l'inspiration..." */
         input_onglet.placeholder = "Trouver de l'inspiration..."

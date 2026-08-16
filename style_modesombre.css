@@ -80,7 +80,7 @@ header, #slider, #slider_grand, div#menuderoulant{
     background-color:var(--citron)
 } */
 
-input[type=search], button#big-think, button#filtre, a#retour{
+input[type=search], button#filtre,button#big-think, a#retour{
     background-color: var(--liquid-glass-dark);
     box-shadow: 0px 0px 10px black;
     color:white;
